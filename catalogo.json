@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "titulo": "Misión Imposible",
+    "tipo": "banner",
+    "categoria": "banners",
+    "portadaUrl": "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    "descripcion": "Tom Cruise vuelve a la acción"
+  },
+  {
+    "id": 2,
+    "titulo": "Avatar",
+    "tipo": "banner",
+    "categoria": "banners",
+    "portadaUrl": "https://image.tmdb.org/t/p/w500/6EiRUJpuAoQPvrs7kUyLpP4k3nR.jpg",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    "descripcion": "El mundo de Pandora"
+  },
+  {
+    "id": 3,
+    "titulo": "Interestelar",
+    "tipo": "banner",
+    "categoria": "banners",
+    "portadaUrl": "https://image.tmdb.org/t/p/w500/rAiG3Gp7DQXeY2uHjJQ6rC5g8w.jpg",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "descripcion": "El viaje al espacio"
+  },
+  {
+    "id": 4,
+    "titulo": "RCN HD",
+    "tipo": "canal",
+    "categoria": "canales",
+    "portadaUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/RCN_Televisi%C3%B3n_logo.svg/1200px-RCN_Televisi%C3%B3n_logo.svg.png",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    "descripcion": "Las de siempre"
+  },
+  {
+    "id": 5,
+    "titulo": "Warner HD",
+    "tipo": "canal",
+    "categoria": "canales",
+    "portadaUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Warner_Bros_logo.svg/1200px-Warner_Bros_logo.svg.png",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+    "descripcion": "Canal 002"
+  },
+  {
+    "id": 6,
+    "titulo": "HBO FAMILY HD",
+    "tipo": "canal",
+    "categoria": "canales",
+    "portadaUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/HBO_Family_logo.svg/1200px-HBO_Family_logo.svg.png",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "descripcion": "Canal 003"
+  },
+  {
+    "id": 7,
+    "titulo": "El astronauta",
+    "tipo": "pelicula",
+    "categoria": "vagando",
+    "portadaUrl": "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    "descripcion": "Vagando por el universo"
+  },
+  {
+    "id": 8,
+    "titulo": "Sputnik: extraño pasajero",
+    "tipo": "pelicula",
+    "categoria": "vagando",
+    "portadaUrl": "https://image.tmdb.org/t/p/w500/6EiRUJpuAoQPvrs7kUyLpP4k3nR.jpg",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "descripcion": "Vagando por el universo"
+  },
+  {
+    "id": 9,
+    "titulo": "Blade Runner 2049",
+    "tipo": "pelicula",
+    "categoria": "vagando",
+    "portadaUrl": "https://image.tmdb.org/t/p/w500/8D9bPa55F2B2U5p3dQd4y3tW6f.jpg",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    "descripcion": "Vagando por el universo"
+  },
+  {
+    "id": 10,
+    "titulo": "Les digo almas",
+    "tipo": "pelicula",
+    "categoria": "2026peliculas",
+    "portadaUrl": "https://image.tmdb.org/t/p/w500/7d5K9oY2v4aJv3qG6gH7p8r9s0.jpg",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+    "descripcion": "2026 Películas"
+  },
+  {
+    "id": 11,
+    "titulo": "La canción de mi padre 2",
+    "tipo": "pelicula",
+    "categoria": "2026peliculas",
+    "portadaUrl": "https://image.tmdb.org/t/p/w500/8D9bPa55F2B2U5p3dQd4y3tW6f.jpg",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "descripcion": "2026 Películas"
+  },
+  {
+    "id": 12,
+    "titulo": "DİLEK TAŞI",
+    "tipo": "serie",
+    "categoria": "turquia",
+    "portadaUrl": "https://image.tmdb.org/t/p/w500/5a4JdoFwll5DRtKjmgJ0Gz4x7Zq.jpg",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    "descripcion": "Serie Turquía"
+  },
+  {
+    "id": 13,
+    "titulo": "Barcelona vs Real Madrid",
+    "tipo": "canal",
+    "categoria": "deportes",
+    "portadaUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/FC_Barcelona_logo.svg/1200px-FC_Barcelona_logo.svg.png",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    "descripcion": "EN VIVO - La Liga"
+  },
+  {
+    "id": 14,
+    "titulo": "PSG vs Bayern",
+    "tipo": "canal",
+    "categoria": "deportes",
+    "portadaUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Paris_Saint-Germain_FC_logo.svg/1200px-Paris_Saint-Germain_FC_logo.svg.png",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "descripcion": "18:30 - Champions"
+  }
+]

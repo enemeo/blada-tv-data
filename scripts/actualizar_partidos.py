@@ -1,22 +1,22 @@
 import json
-import re
 import requests
-from bs4 import BeautifulSoup
-from datetime import datetime
+from datetime import datetime, timedelta
 
-URLS_ESPN = [
-    {
-        "url": "https://www.espn.com.pe/futbol/calendario/_/liga/fifa.friendly",
-        "liga": "Amistoso"
-    },
-    {
-        "url": "https://www.espn.com.pe/futbol/calendario/_/liga/fifa.world",
-        "liga": "Copa Mundial"
-    }
+LIGAS_ESPN = [
+    ("fifa.friendly", "Amistoso"),
+    ("fifa.world", "Copa Mundial"),
+    ("conmebol.libertadores", "Copa Libertadores"),
+    ("uefa.champions", "Champions League"),
+    ("uefa.europa", "Europa League"),
+    ("esp.1", "LaLiga"),
+    ("eng.1", "Premier League"),
+    ("ita.1", "Serie A"),
+    ("ger.1", "Bundesliga"),
+    ("fra.1", "Ligue 1")
 ]
 
 def limpiar(texto):
-    return re.sub(r"\s+", " ", texto or "").strip()
+    return (texto or "").strip()
 
 def cargar_anteriores():
     try:
@@ -31,79 +31,87 @@ def buscar_video(local, visitante, anteriores):
             return p.get("videoUrl", "")
     return ""
 
+def estado_espn(estado):
+    nombre = estado.get("name", "")
+    detalle = estado.get("detail", "")
+    texto = f"{nombre} {detalle}".lower()
+
+    if "final" in texto:
+        return "Finalizado"
+    if "in progress" in texto or "halftime" in texto or "live" in texto:
+        return "En progreso"
+    return "Programado"
+
 anteriores = cargar_anteriores()
 partidos = []
 
-headers = {
-    "User-Agent": "Mozilla/5.0"
-}
+for dias in range(0, 4):
+    fecha = datetime.now() + timedelta(days=dias)
+    fecha_api = fecha.strftime("%Y%m%d")
+    fecha_app = fecha.strftime("%d/%m")
 
-for fuente in URLS_ESPN:
-    try:
-        html = requests.get(fuente["url"], headers=headers, timeout=20).text
-        soup = BeautifulSoup(html, "html.parser")
+    for codigo_liga, nombre_liga in LIGAS_ESPN:
+        url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{codigo_liga}/scoreboard"
 
-        fecha_actual = datetime.now().strftime("%d/%m")
+        try:
+            r = requests.get(
+                url,
+                params={
+                    "dates": fecha_api,
+                    "limit": 100,
+                    "region": "pe",
+                    "lang": "es"
+                },
+                headers={"User-Agent": "Mozilla/5.0"},
+                timeout=20
+            )
 
-        for h2 in soup.find_all(["h2", "h3"]):
-            texto_fecha = limpiar(h2.get_text())
+            data = r.json()
+            eventos = data.get("events", [])
 
-            if "Lunes" in texto_fecha or "Martes" in texto_fecha or "Miércoles" in texto_fecha or "Jueves" in texto_fecha or "Viernes" in texto_fecha or "Sábado" in texto_fecha or "Domingo" in texto_fecha:
-                fecha_actual = texto_fecha
+            for evento in eventos:
+                competidores = evento.get("competitions", [{}])[0].get("competitors", [])
 
-            tabla = h2.find_next("table")
-            if not tabla:
-                continue
-
-            filas = tabla.find_all("tr")
-
-            for fila in filas:
-                celdas = fila.find_all("td")
-                if len(celdas) < 2:
+                if len(competidores) < 2:
                     continue
 
-                texto = limpiar(fila.get_text(" "))
+                home = next((c for c in competidores if c.get("homeAway") == "home"), competidores[0])
+                away = next((c for c in competidores if c.get("homeAway") == "away"), competidores[1])
 
-                if " v " not in texto:
-                    continue
-
-                partes = texto.split(" v ")
-                if len(partes) < 2:
-                    continue
-
-                local = limpiar(partes[0])
-                resto = limpiar(partes[1])
-
-                hora_match = re.search(r"(\d{1,2}:\d{2}\s?[AP]M)", resto, re.IGNORECASE)
-                hora = hora_match.group(1) if hora_match else ""
-
-                visitante = resto
-                if hora:
-                    visitante = limpiar(resto.replace(hora, ""))
+                local = limpiar(home.get("team", {}).get("displayName"))
+                visitante = limpiar(away.get("team", {}).get("displayName"))
 
                 if not local or not visitante:
                     continue
 
-                if any(b in f"{local} {visitante}".lower() for b in ["u17", "u18", "u19", "u20", "u21", "u23", "women", "femenino"]):
+                texto = f"{nombre_liga} {local} {visitante}".lower()
+                if any(x in texto for x in ["women", "u17", "u18", "u19", "u20", "u21", "u23"]):
                     continue
+
+                estado = estado_espn(evento.get("status", {}).get("type", {}))
+
+                if estado == "Finalizado":
+                    continue
+
+                hora = evento.get("date", "")
 
                 partidos.append({
                     "id": len(partidos) + 1,
-                    "liga": fuente["liga"],
+                    "liga": nombre_liga,
                     "hora": hora,
-                    "fecha": fecha_actual,
+                    "fecha": fecha_app,
                     "equipoLocal": local,
                     "equipoVisitante": visitante,
-                    "logoLocal": "",
-                    "logoVisitante": "",
-                    "estado": "Programado",
+                    "logoLocal": home.get("team", {}).get("logo", ""),
+                    "logoVisitante": away.get("team", {}).get("logo", ""),
+                    "estado": estado,
                     "videoUrl": buscar_video(local, visitante, anteriores)
                 })
 
-    except Exception as e:
-        print("Error ESPN:", fuente["url"], e)
+        except Exception as e:
+            print("Error ESPN API:", codigo_liga, e)
 
 with open("partidos.json", "w", encoding="utf-8") as f:
     json.dump(partidos, f, ensure_ascii=False, indent=2)
 
-print("Partidos ESPN actualizados:", len(partidos))
+print("Partidos ESPN API actualizados:", len(partidos))

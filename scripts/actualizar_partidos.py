@@ -1,9 +1,22 @@
 import json
+import re
 import requests
-from datetime import datetime, timedelta
+from bs4 import BeautifulSoup
+from datetime import datetime
 
-def normalizar(t):
-    return (t or "").lower().strip()
+URLS_ESPN = [
+    {
+        "url": "https://www.espn.com.pe/futbol/calendario/_/liga/fifa.friendly",
+        "liga": "Amistoso"
+    },
+    {
+        "url": "https://www.espn.com.pe/futbol/calendario/_/liga/fifa.world",
+        "liga": "Copa Mundial"
+    }
+]
+
+def limpiar(texto):
+    return re.sub(r"\s+", " ", texto or "").strip()
 
 def cargar_anteriores():
     try:
@@ -14,77 +27,83 @@ def cargar_anteriores():
 
 def buscar_video(local, visitante, anteriores):
     for p in anteriores:
-        if normalizar(p.get("equipoLocal")) == normalizar(local) and normalizar(p.get("equipoVisitante")) == normalizar(visitante):
+        if limpiar(p.get("equipoLocal")).lower() == limpiar(local).lower() and limpiar(p.get("equipoVisitante")).lower() == limpiar(visitante).lower():
             return p.get("videoUrl", "")
     return ""
-
-def aceptar_partido(liga, local, visitante, estado):
-    texto = f"{liga} {local} {visitante}".lower()
-
-    bloqueados = [
-        "women", "femenino", "u17", "u18", "u19", "u20", "u21", "u23",
-        "youth", "reserva", "reserve"
-    ]
-
-    if any(b in texto for b in bloqueados):
-        return False
-
-    if estado in ["FT", "AET", "PEN"]:
-        return False
-
-    importantes = [
-        "friendly", "world cup", "copa america", "libertadores",
-        "champions", "uefa", "qualifiers", "eliminatorias",
-        "premier league", "la liga", "serie a", "bundesliga",
-        "ligue 1", "mls", "usl",
-        "peru", "spain", "france", "argentina", "brazil",
-        "colombia", "uruguay", "chile", "mexico"
-    ]
-
-    return any(i in texto for i in importantes)
 
 anteriores = cargar_anteriores()
 partidos = []
 
-for dias in range(0, 4):
-    fecha = datetime.now() + timedelta(days=dias)
-    fecha_api = fecha.strftime("%Y-%m-%d")
+headers = {
+    "User-Agent": "Mozilla/5.0"
+}
 
-    url = f"https://www.thesportsdb.com/api/v1/json/3/eventsday.php?d={fecha_api}&s=Soccer"
-
+for fuente in URLS_ESPN:
     try:
-        data = requests.get(url, timeout=20).json()
-        eventos = data.get("events") or []
+        html = requests.get(fuente["url"], headers=headers, timeout=20).text
+        soup = BeautifulSoup(html, "html.parser")
 
-        for e in eventos:
-            liga = e.get("strLeague") or "Fútbol"
-            local = e.get("strHomeTeam") or ""
-            visitante = e.get("strAwayTeam") or ""
-            estado = e.get("strStatus") or "Programado"
+        fecha_actual = datetime.now().strftime("%d/%m")
 
-            if not local or not visitante:
+        for h2 in soup.find_all(["h2", "h3"]):
+            texto_fecha = limpiar(h2.get_text())
+
+            if "Lunes" in texto_fecha or "Martes" in texto_fecha or "Miércoles" in texto_fecha or "Jueves" in texto_fecha or "Viernes" in texto_fecha or "Sábado" in texto_fecha or "Domingo" in texto_fecha:
+                fecha_actual = texto_fecha
+
+            tabla = h2.find_next("table")
+            if not tabla:
                 continue
 
-            if not aceptar_partido(liga, local, visitante, estado):
-                continue
+            filas = tabla.find_all("tr")
 
-            partidos.append({
-                "id": len(partidos) + 1,
-                "liga": liga,
-                "hora": e.get("strTime") or "",
-                "fecha": fecha.strftime("%d/%m"),
-                "equipoLocal": local,
-                "equipoVisitante": visitante,
-                "logoLocal": "",
-                "logoVisitante": "",
-                "estado": estado,
-                "videoUrl": buscar_video(local, visitante, anteriores)
-            })
+            for fila in filas:
+                celdas = fila.find_all("td")
+                if len(celdas) < 2:
+                    continue
+
+                texto = limpiar(fila.get_text(" "))
+
+                if " v " not in texto:
+                    continue
+
+                partes = texto.split(" v ")
+                if len(partes) < 2:
+                    continue
+
+                local = limpiar(partes[0])
+                resto = limpiar(partes[1])
+
+                hora_match = re.search(r"(\d{1,2}:\d{2}\s?[AP]M)", resto, re.IGNORECASE)
+                hora = hora_match.group(1) if hora_match else ""
+
+                visitante = resto
+                if hora:
+                    visitante = limpiar(resto.replace(hora, ""))
+
+                if not local or not visitante:
+                    continue
+
+                if any(b in f"{local} {visitante}".lower() for b in ["u17", "u18", "u19", "u20", "u21", "u23", "women", "femenino"]):
+                    continue
+
+                partidos.append({
+                    "id": len(partidos) + 1,
+                    "liga": fuente["liga"],
+                    "hora": hora,
+                    "fecha": fecha_actual,
+                    "equipoLocal": local,
+                    "equipoVisitante": visitante,
+                    "logoLocal": "",
+                    "logoVisitante": "",
+                    "estado": "Programado",
+                    "videoUrl": buscar_video(local, visitante, anteriores)
+                })
 
     except Exception as e:
-        print("Error:", e)
+        print("Error ESPN:", fuente["url"], e)
 
 with open("partidos.json", "w", encoding="utf-8") as f:
     json.dump(partidos, f, ensure_ascii=False, indent=2)
 
-print("Partidos actualizados:", len(partidos))
+print("Partidos ESPN actualizados:", len(partidos))

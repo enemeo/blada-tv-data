@@ -1,14 +1,26 @@
 [
   {
     "id": 1,
-    "liga": "Argentina Primera B Metropolitana",
-    "hora": "18:30:00",
-    "fecha": "08/06",
-    "equipoLocal": "UAI Urquiza",
-    "equipoVisitante": "Liniers",
+    "liga": "American USL Championship",
+    "hora": "23:30:00",
+    "fecha": "10/06",
+    "equipoLocal": "Detroit City FC",
+    "equipoVisitante": "El Paso Locomotive",
     "logoLocal": "",
     "logoVisitante": "",
-    "estado": "FT",
+    "estado": "NS",
+    "videoUrl": ""
+  },
+  {
+    "id": 2,
+    "liga": "American USL Championship",
+    "hora": "23:00:00",
+    "fecha": "10/06",
+    "equipoLocal": "Tampa Bay Rowdies",
+    "equipoVisitante": "Charleston Battery",
+    "logoLocal": "",
+    "logoVisitante": "",
+    "estado": "NS",
     "videoUrl": ""
   }
 ]

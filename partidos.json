@@ -1,14 +1,14 @@
 [
   {
     "id": 1,
-    "liga": "Amistoso",
-    "hora": "9:00 pm",
+    "liga": "Argentina Primera B Metropolitana",
+    "hora": "18:30:00",
     "fecha": "08/06",
-    "equipoLocal": "Perú",
-    "equipoVisitante": "España",
+    "equipoLocal": "UAI Urquiza",
+    "equipoVisitante": "Liniers",
     "logoLocal": "",
     "logoVisitante": "",
-    "estado": "Programado",
+    "estado": "FT",
     "videoUrl": ""
   }
 ]

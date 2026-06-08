@@ -1,64 +1,121 @@
 import json
 import requests
-from bs4 import BeautifulSoup
-from datetime import datetime
+from datetime import datetime, timedelta
 
-BUSQUEDAS = [
-    "partidos amistosos internacionales hoy fútbol",
-    "partidos mundial hoy fútbol",
-    "partidos eliminatorias mundial hoy fútbol",
-    "partidos copa libertadores hoy",
-    "partidos champions league hoy",
-    "partidos selección peru hoy"
-]
+def normalizar(texto):
+    return (texto or "").lower().strip()
 
+def cargar_videos_actuales():
+    try:
+        with open("partidos.json", "r", encoding="utf-8") as f:
+            datos = json.load(f)
+        return datos
+    except:
+        return []
+
+def buscar_video(local, visitante, anteriores):
+    for p in anteriores:
+        if normalizar(p.get("equipoLocal")) == normalizar(local) and normalizar(p.get("equipoVisitante")) == normalizar(visitante):
+            return p.get("videoUrl", "")
+    return ""
+
+def es_importante(liga, local, visitante):
+    texto = f"{liga} {local} {visitante}".lower()
+
+    bloqueados = ["women", "u17", "u18", "u19", "u20", "u21", "u23", "youth"]
+
+    if any(b in texto for b in bloqueados):
+        return False
+
+    importantes = [
+        "friendly",
+        "world cup",
+        "copa america",
+        "libertadores",
+        "champions league",
+        "europa league",
+        "uefa",
+        "premier league",
+        "la liga",
+        "serie a",
+        "bundesliga",
+        "ligue 1",
+        "peru",
+        "spain",
+        "france",
+        "argentina",
+        "brazil",
+        "colombia",
+        "mexico",
+        "uruguay",
+        "chile"
+    ]
+
+    return any(i in texto for i in importantes)
+
+anteriores = cargar_videos_actuales()
 partidos = []
 
-def agregar(local, visitante, liga="Fútbol", hora="", estado="Programado"):
-    clave = f"{local}-{visitante}"
-    if any(p["equipoLocal"] + "-" + p["equipoVisitante"] == clave for p in partidos):
-        return
+fechas = [
+    datetime.now(),
+    datetime.now() + timedelta(days=1)
+]
 
-    partidos.append({
-        "id": len(partidos) + 1,
-        "liga": liga,
-        "hora": hora,
-        "fecha": datetime.now().strftime("%d/%m"),
-        "equipoLocal": local,
-        "equipoVisitante": visitante,
-        "logoLocal": "",
-        "logoVisitante": "",
-        "estado": estado,
-        "videoUrl": ""
-    })
+for fecha in fechas:
+    fecha_api = fecha.strftime("%Y-%m-%d")
 
-for busqueda in BUSQUEDAS:
+    url = f"https://www.thesportsdb.com/api/v1/json/3/eventsday.php?d={fecha_api}&s=Soccer"
+
     try:
-        html = requests.get(
-            "https://www.google.com/search",
-            params={"q": busqueda, "hl": "es"},
-            headers={"User-Agent": "Mozilla/5.0"},
-            timeout=15
-        ).text
+        r = requests.get(url, timeout=20)
+        data = r.json()
 
-        texto = BeautifulSoup(html, "html.parser").get_text(" ")
+        eventos = data.get("events") or []
 
-        if "Perú" in texto and "España" in texto:
-            agregar("Perú", "España", "Amistoso", "9:00 pm")
+        for e in eventos:
+            liga = e.get("strLeague") or "Fútbol"
+            local = e.get("strHomeTeam") or ""
+            visitante = e.get("strAwayTeam") or ""
 
-        if "Francia" in texto and "Irlanda del Norte" in texto:
-            agregar("Francia", "Irlanda del Norte", "Amistoso", "2:10 pm")
+            if not local or not visitante:
+                continue
 
-        if "Países Bajos" in texto and "Uzbekistán" in texto:
-            agregar("Países Bajos", "Uzbekistán", "Amistoso", "")
+            if not es_importante(liga, local, visitante):
+                continue
 
-    except Exception as e:
-        print("Error:", busqueda, e)
+            video = buscar_video(local, visitante, anteriores)
+
+            partidos.append({
+                "id": len(partidos) + 1,
+                "liga": liga,
+                "hora": e.get("strTime") or "",
+                "fecha": fecha.strftime("%d/%m"),
+                "equipoLocal": local,
+                "equipoVisitante": visitante,
+                "logoLocal": "",
+                "logoVisitante": "",
+                "estado": e.get("strStatus") or "Programado",
+                "videoUrl": video
+            })
+
+    except Exception as error:
+        print("Error:", error)
 
 if not partidos:
-    agregar("Perú", "España", "Amistoso", "9:00 pm")
+    partidos.append({
+        "id": 1,
+        "liga": "Amistoso",
+        "hora": "9:00 pm",
+        "fecha": datetime.now().strftime("%d/%m"),
+        "equipoLocal": "Perú",
+        "equipoVisitante": "España",
+        "logoLocal": "",
+        "logoVisitante": "",
+        "estado": "Programado",
+        "videoUrl": buscar_video("Perú", "España", anteriores)
+    })
 
 with open("partidos.json", "w", encoding="utf-8") as f:
     json.dump(partidos, f, ensure_ascii=False, indent=2)
 
-print("Actualizados:", len(partidos))
+print("Partidos actualizados:", len(partidos))

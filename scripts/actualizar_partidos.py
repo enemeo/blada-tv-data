@@ -2,14 +2,13 @@ import json
 import requests
 from datetime import datetime, timedelta
 
-def normalizar(texto):
-    return (texto or "").lower().strip()
+def normalizar(t):
+    return (t or "").lower().strip()
 
-def cargar_videos_actuales():
+def cargar_anteriores():
     try:
         with open("partidos.json", "r", encoding="utf-8") as f:
-            datos = json.load(f)
-        return datos
+            return json.load(f)
     except:
         return []
 
@@ -19,12 +18,18 @@ def buscar_video(local, visitante, anteriores):
             return p.get("videoUrl", "")
     return ""
 
-def es_importante(liga, local, visitante):
+def aceptar_partido(liga, local, visitante, estado):
     texto = f"{liga} {local} {visitante}".lower()
 
-    bloqueados = ["women", "u17", "u18", "u19", "u20", "u21", "u23", "youth"]
+    bloqueados = [
+        "women", "femenino", "u17", "u18", "u19", "u20", "u21", "u23",
+        "youth", "primera b", "reserva", "reserve"
+    ]
 
     if any(b in texto for b in bloqueados):
+        return False
+
+    if estado in ["FT", "AET", "PEN"]:
         return False
 
     importantes = [
@@ -32,58 +37,47 @@ def es_importante(liga, local, visitante):
         "world cup",
         "copa america",
         "libertadores",
-        "champions league",
-        "europa league",
+        "champions",
         "uefa",
-        "premier league",
-        "la liga",
-        "serie a",
-        "bundesliga",
-        "ligue 1",
+        "eliminatorias",
+        "qualifiers",
         "peru",
         "spain",
         "france",
         "argentina",
         "brazil",
         "colombia",
-        "mexico",
         "uruguay",
-        "chile"
+        "chile",
+        "mexico"
     ]
 
     return any(i in texto for i in importantes)
 
-anteriores = cargar_videos_actuales()
+anteriores = cargar_anteriores()
 partidos = []
 
-fechas = [
-    datetime.now(),
-    datetime.now() + timedelta(days=1)
-]
-
-for fecha in fechas:
+for dias in range(0, 3):
+    fecha = datetime.now() + timedelta(days=dias)
     fecha_api = fecha.strftime("%Y-%m-%d")
 
     url = f"https://www.thesportsdb.com/api/v1/json/3/eventsday.php?d={fecha_api}&s=Soccer"
 
     try:
-        r = requests.get(url, timeout=20)
-        data = r.json()
-
+        data = requests.get(url, timeout=20).json()
         eventos = data.get("events") or []
 
         for e in eventos:
             liga = e.get("strLeague") or "Fútbol"
             local = e.get("strHomeTeam") or ""
             visitante = e.get("strAwayTeam") or ""
+            estado = e.get("strStatus") or "Programado"
 
             if not local or not visitante:
                 continue
 
-            if not es_importante(liga, local, visitante):
+            if not aceptar_partido(liga, local, visitante, estado):
                 continue
-
-            video = buscar_video(local, visitante, anteriores)
 
             partidos.append({
                 "id": len(partidos) + 1,
@@ -94,13 +88,14 @@ for fecha in fechas:
                 "equipoVisitante": visitante,
                 "logoLocal": "",
                 "logoVisitante": "",
-                "estado": e.get("strStatus") or "Programado",
-                "videoUrl": video
+                "estado": estado,
+                "videoUrl": buscar_video(local, visitante, anteriores)
             })
 
-    except Exception as error:
-        print("Error:", error)
+    except Exception as e:
+        print("Error:", e)
 
+# respaldo si la fuente gratis no devuelve partidos buenos
 if not partidos:
     partidos.append({
         "id": 1,
@@ -109,8 +104,8 @@ if not partidos:
         "fecha": datetime.now().strftime("%d/%m"),
         "equipoLocal": "Perú",
         "equipoVisitante": "España",
-        "logoLocal": "",
-        "logoVisitante": "",
+        "logoLocal": "https://media.api-sports.io/football/teams/30.png",
+        "logoVisitante": "https://media.api-sports.io/football/teams/9.png",
         "estado": "Programado",
         "videoUrl": buscar_video("Perú", "España", anteriores)
     })

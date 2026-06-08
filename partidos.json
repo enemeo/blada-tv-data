@@ -6,9 +6,9 @@
     "fecha": "08/06",
     "equipoLocal": "Perú",
     "equipoVisitante": "España",
-    "logoLocal": "https://media.api-sports.io/football/teams/30.png",
-    "logoVisitante": "https://media.api-sports.io/football/teams/9.png",
-    "estado": "ATV / Movistar Deportes",
+    "logoLocal": "",
+    "logoVisitante": "",
+    "estado": "Programado",
     "videoUrl": ""
   }
 ]

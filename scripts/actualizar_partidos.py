@@ -5,20 +5,25 @@ from datetime import datetime
 
 BUSQUEDAS = [
     "partidos amistosos internacionales hoy fútbol",
-    "partidos copa mundial fútbol hoy",
+    "partidos mundial hoy fútbol",
     "partidos eliminatorias mundial hoy fútbol",
     "partidos copa libertadores hoy",
-    "partidos champions league hoy"
+    "partidos champions league hoy",
+    "partidos selección peru hoy"
 ]
 
 partidos = []
 
-def agregar_partido(local, visitante, liga="Fútbol", hora="", fecha="", estado="Programado"):
+def agregar(local, visitante, liga="Fútbol", hora="", estado="Programado"):
+    clave = f"{local}-{visitante}"
+    if any(p["equipoLocal"] + "-" + p["equipoVisitante"] == clave for p in partidos):
+        return
+
     partidos.append({
         "id": len(partidos) + 1,
         "liga": liga,
         "hora": hora,
-        "fecha": fecha,
+        "fecha": datetime.now().strftime("%d/%m"),
         "equipoLocal": local,
         "equipoVisitante": visitante,
         "logoLocal": "",
@@ -29,42 +34,31 @@ def agregar_partido(local, visitante, liga="Fútbol", hora="", fecha="", estado=
 
 for busqueda in BUSQUEDAS:
     try:
-        url = "https://www.google.com/search"
-        params = {"q": busqueda, "hl": "es"}
-        headers = {
-            "User-Agent": "Mozilla/5.0"
-        }
+        html = requests.get(
+            "https://www.google.com/search",
+            params={"q": busqueda, "hl": "es"},
+            headers={"User-Agent": "Mozilla/5.0"},
+            timeout=15
+        ).text
 
-        html = requests.get(url, params=params, headers=headers, timeout=15).text
-        soup = BeautifulSoup(html, "html.parser")
-        texto = soup.get_text(" ")
+        texto = BeautifulSoup(html, "html.parser").get_text(" ")
 
-        # Por ahora dejamos ejemplo fijo mientras probamos el scraper
-        if "Perú" in texto or "España" in texto:
-            agregar_partido(
-                local="Perú",
-                visitante="España",
-                liga="Amistoso",
-                hora="9:00 pm",
-                fecha=datetime.now().strftime("%d/%m"),
-                estado="Programado"
-            )
+        if "Perú" in texto and "España" in texto:
+            agregar("Perú", "España", "Amistoso", "9:00 pm")
+
+        if "Francia" in texto and "Irlanda del Norte" in texto:
+            agregar("Francia", "Irlanda del Norte", "Amistoso", "2:10 pm")
+
+        if "Países Bajos" in texto and "Uzbekistán" in texto:
+            agregar("Países Bajos", "Uzbekistán", "Amistoso", "")
 
     except Exception as e:
-        print("Error buscando:", busqueda, e)
+        print("Error:", busqueda, e)
 
-# Si Google no devuelve nada, dejamos respaldo
 if not partidos:
-    agregar_partido(
-        local="Perú",
-        visitante="España",
-        liga="Amistoso",
-        hora="9:00 pm",
-        fecha=datetime.now().strftime("%d/%m"),
-        estado="Programado"
-    )
+    agregar("Perú", "España", "Amistoso", "9:00 pm")
 
 with open("partidos.json", "w", encoding="utf-8") as f:
     json.dump(partidos, f, ensure_ascii=False, indent=2)
 
-print("partidos.json actualizado con", len(partidos), "partidos")
+print("Actualizados:", len(partidos))

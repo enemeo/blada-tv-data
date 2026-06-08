@@ -1,70 +1,42 @@
-import json
-import requests
-from bs4 import BeautifulSoup
-from datetime import datetime
+name: Actualizar Partidos
 
-BUSQUEDAS = [
-    "partidos amistosos internacionales hoy fútbol",
-    "partidos copa mundial fútbol hoy",
-    "partidos eliminatorias mundial hoy fútbol",
-    "partidos copa libertadores hoy",
-    "partidos champions league hoy"
-]
+on:
+  schedule:
+    - cron: '*/30 * * * *'   # cada 30 minutos
+  workflow_dispatch:
 
-partidos = []
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
 
-def agregar_partido(local, visitante, liga="Fútbol", hora="", fecha="", estado="Programado"):
-    partidos.append({
-        "id": len(partidos) + 1,
-        "liga": liga,
-        "hora": hora,
-        "fecha": fecha,
-        "equipoLocal": local,
-        "equipoVisitante": visitante,
-        "logoLocal": "",
-        "logoVisitante": "",
-        "estado": estado,
-        "videoUrl": ""
-    })
+    permissions:
+      contents: write
 
-for busqueda in BUSQUEDAS:
-    try:
-        url = "https://www.google.com/search"
-        params = {"q": busqueda, "hl": "es"}
-        headers = {
-            "User-Agent": "Mozilla/5.0"
-        }
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
 
-        html = requests.get(url, params=params, headers=headers, timeout=15).text
-        soup = BeautifulSoup(html, "html.parser")
-        texto = soup.get_text(" ")
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-        # Por ahora dejamos ejemplo fijo mientras probamos el scraper
-        if "Perú" in texto or "España" in texto:
-            agregar_partido(
-                local="Perú",
-                visitante="España",
-                liga="Amistoso",
-                hora="9:00 pm",
-                fecha=datetime.now().strftime("%d/%m"),
-                estado="Programado"
-            )
+      - name: Instalar dependencias
+        run: |
+          pip install requests beautifulsoup4
 
-    except Exception as e:
-        print("Error buscando:", busqueda, e)
+      - name: Ejecutar script
+        run: |
+          python scripts/actualizar_partidos.py
 
-# Si Google no devuelve nada, dejamos respaldo
-if not partidos:
-    agregar_partido(
-        local="Perú",
-        visitante="España",
-        liga="Amistoso",
-        hora="9:00 pm",
-        fecha=datetime.now().strftime("%d/%m"),
-        estado="Programado"
-    )
+      - name: Guardar cambios
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
 
-with open("partidos.json", "w", encoding="utf-8") as f:
-    json.dump(partidos, f, ensure_ascii=False, indent=2)
+          git add partidos.json
 
-print("partidos.json actualizado con", len(partidos), "partidos")
+          git diff --staged --quiet || (
+            git commit -m "Actualizar partidos"
+            git push
+          )

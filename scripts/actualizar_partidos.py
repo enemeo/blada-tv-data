@@ -23,7 +23,7 @@ def aceptar_partido(liga, local, visitante, estado):
 
     bloqueados = [
         "women", "femenino", "u17", "u18", "u19", "u20", "u21", "u23",
-        "youth", "primera b", "reserva", "reserve"
+        "youth", "reserva", "reserve"
     ]
 
     if any(b in texto for b in bloqueados):
@@ -33,23 +33,12 @@ def aceptar_partido(liga, local, visitante, estado):
         return False
 
     importantes = [
-        "friendly",
-        "world cup",
-        "copa america",
-        "libertadores",
-        "champions",
-        "uefa",
-        "eliminatorias",
-        "qualifiers",
-        "peru",
-        "spain",
-        "france",
-        "argentina",
-        "brazil",
-        "colombia",
-        "uruguay",
-        "chile",
-        "mexico"
+        "friendly", "world cup", "copa america", "libertadores",
+        "champions", "uefa", "qualifiers", "eliminatorias",
+        "premier league", "la liga", "serie a", "bundesliga",
+        "ligue 1", "mls", "usl",
+        "peru", "spain", "france", "argentina", "brazil",
+        "colombia", "uruguay", "chile", "mexico"
     ]
 
     return any(i in texto for i in importantes)
@@ -57,7 +46,7 @@ def aceptar_partido(liga, local, visitante, estado):
 anteriores = cargar_anteriores()
 partidos = []
 
-for dias in range(0, 3):
+for dias in range(0, 4):
     fecha = datetime.now() + timedelta(days=dias)
     fecha_api = fecha.strftime("%Y-%m-%d")
 
@@ -94,21 +83,6 @@ for dias in range(0, 3):
 
     except Exception as e:
         print("Error:", e)
-
-# respaldo si la fuente gratis no devuelve partidos buenos
-if not partidos:
-    partidos.append({
-        "id": 1,
-        "liga": "Amistoso",
-        "hora": "9:00 pm",
-        "fecha": datetime.now().strftime("%d/%m"),
-        "equipoLocal": "Perú",
-        "equipoVisitante": "España",
-        "logoLocal": "https://media.api-sports.io/football/teams/30.png",
-        "logoVisitante": "https://media.api-sports.io/football/teams/9.png",
-        "estado": "Programado",
-        "videoUrl": buscar_video("Perú", "España", anteriores)
-    })
 
 with open("partidos.json", "w", encoding="utf-8") as f:
     json.dump(partidos, f, ensure_ascii=False, indent=2)

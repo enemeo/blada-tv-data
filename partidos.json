@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "liga": "Champions League",
+    "hora": "20:00",
+    "fecha": "08/06",
+    "equipoLocal": "Real Madrid",
+    "equipoVisitante": "Manchester City",
+    "logoLocal": "https://media.api-sports.io/football/teams/541.png",
+    "logoVisitante": "https://media.api-sports.io/football/teams/50.png",
+    "estado": "Próximamente",
+    "videoUrl": ""
+  }
+]

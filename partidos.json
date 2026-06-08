@@ -1,6 +1,6 @@
 [
   {
-    "id": 3,
+    "id": 1,
     "liga": "Amistoso",
     "hora": "9:00 pm",
     "fecha": "08/06",
@@ -9,6 +9,6 @@
     "logoLocal": "https://media.api-sports.io/football/teams/30.png",
     "logoVisitante": "https://media.api-sports.io/football/teams/9.png",
     "estado": "ATV / Movistar Deportes",
-    "videoUrl": "https://agvyby.fubo18.com/espn/mono.m3u8?token=10e3690e862772f9d255b23cdfba22e9b69fbb05-7f-1780968658-1780950658"
+    "videoUrl": ""
   }
 ]

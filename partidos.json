@@ -1,14 +1,38 @@
 [
   {
     "id": 1,
-    "liga": "Champions League",
-    "hora": "20:00",
+    "liga": "Amistoso",
+    "hora": "2:10 pm",
     "fecha": "08/06",
-    "equipoLocal": "Real Madrid",
-    "equipoVisitante": "Manchester City",
-    "logoLocal": "https://media.api-sports.io/football/teams/541.png",
-    "logoVisitante": "https://media.api-sports.io/football/teams/50.png",
-    "estado": "Próximamente",
+    "equipoLocal": "Francia",
+    "equipoVisitante": "Irlanda del Norte",
+    "logoLocal": "https://media.api-sports.io/football/teams/2.png",
+    "logoVisitante": "https://media.api-sports.io/football/teams/1109.png",
+    "estado": "ESPN",
+    "videoUrl": ""
+  },
+  {
+    "id": 2,
+    "liga": "Liga Betplay DIMAYOR",
+    "hora": "5:00 pm",
+    "fecha": "08/06",
+    "equipoLocal": "Atlético Nacional",
+    "equipoVisitante": "Junior",
+    "logoLocal": "https://media.api-sports.io/football/teams/1127.png",
+    "logoVisitante": "https://media.api-sports.io/football/teams/1135.png",
+    "estado": "RCN Nuestra Tele",
+    "videoUrl": ""
+  },
+  {
+    "id": 3,
+    "liga": "Amistoso",
+    "hora": "9:00 pm",
+    "fecha": "08/06",
+    "equipoLocal": "Perú",
+    "equipoVisitante": "España",
+    "logoLocal": "https://media.api-sports.io/football/teams/30.png",
+    "logoVisitante": "https://media.api-sports.io/football/teams/9.png",
+    "estado": "ATV / Movistar Deportes",
     "videoUrl": ""
   }
 ]

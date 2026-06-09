@@ -1,142 +1,93 @@
-import json
-import requests
-from datetime import datetime, timedelta, timezone
+package com.example.vladatv
 
-LIGAS_ESPN = [
-    ("fifa.friendly", "Amistoso"),
-    ("fifa.world", "Copa Mundial"),
-    ("conmebol.libertadores", "Copa Libertadores"),
-    ("uefa.champions", "Champions League"),
-    ("uefa.europa", "Europa League"),
-    ("esp.1", "LaLiga"),
-    ("eng.1", "Premier League"),
-    ("ita.1", "Serie A"),
-    ("ger.1", "Bundesliga"),
-    ("fra.1", "Ligue 1")
-]
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import java.net.URL
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Locale
 
-PERU_TZ = timezone(timedelta(hours=-5))
+object DataProviderPartidos {
 
-def limpiar(texto):
-    return (texto or "").strip()
+    suspend fun cargarPartidos(): List<PartidoItem> {
+        return withContext(Dispatchers.IO) {
+            try {
+                val url =
+                    "https://raw.githubusercontent.com/enemeo/blada-tv-data/main/partidos.json?nocache=${System.currentTimeMillis()}"
 
-def cargar_anteriores():
-    try:
-        with open("partidos.json", "r", encoding="utf-8") as f:
-            return json.load(f)
-    except:
-        return []
+                val jsonString = URL(url).readText()
+                println("PARTIDOS JSON: $jsonString")
 
-def buscar_video(local, visitante, anteriores):
-    for p in anteriores:
-        if limpiar(p.get("equipoLocal")).lower() == limpiar(local).lower() and limpiar(p.get("equipoVisitante")).lower() == limpiar(visitante).lower():
-            return p.get("videoUrl", "")
-    return ""
+                val listType = object : TypeToken<List<PartidoItem>>() {}.type
 
-def estado_espn(estado):
-    texto = f"{estado.get('name', '')} {estado.get('detail', '')}".lower()
+                val partidos: List<PartidoItem> =
+                    Gson().fromJson(jsonString, listType)
 
-    if "final" in texto:
-        return "Finalizado"
-    if "in progress" in texto or "halftime" in texto or "live" in texto:
-        return "En progreso"
-    return "Programado"
+                partidos.filter { partido ->
+                    partido.estado.equals("En progreso", true) ||
+                            !partidoYaPaso(partido.fecha, partido.hora, partido.estado)
+                }
 
-def convertir_fecha_hora_peru(fecha_hora):
-    try:
-        dt_utc = datetime.fromisoformat(fecha_hora.replace("Z", "+00:00"))
-        dt_peru = dt_utc.astimezone(PERU_TZ)
-        hora = dt_peru.strftime("%I:%M %p").lstrip("0")
-        fecha = dt_peru.strftime("%d/%m")
-        return dt_peru, hora, fecha
-    except:
-        return None, "", ""
+            } catch (e: Exception) {
+                println("ERROR PARTIDOS: ${e.message}")
+                emptyList()
+            }
+        }
+    }
 
-def partido_ya_paso(dt_peru, estado):
-    if estado == "En progreso":
-        return False
+    private fun partidoYaPaso(fecha: String, hora: String, estado: String): Boolean {
+        return try {
+            if (
+                estado.equals("Finalizado", true) ||
+                estado.equals("FT", true) ||
+                estado.equals("AET", true) ||
+                estado.equals("PEN", true)
+            ) {
+                return true
+            }
 
-    if not dt_peru:
-        return False
+            if (hora.isBlank()) return false
 
-    ahora_peru = datetime.now(PERU_TZ)
+            val actualYear =
+                Calendar.getInstance().get(Calendar.YEAR)
 
-    # elimina partidos 2 horas después de su hora de inicio
-    return ahora_peru > dt_peru + timedelta(hours=2)
-
-anteriores = cargar_anteriores()
-partidos = []
-
-for dias in range(0, 4):
-    fecha = datetime.now(PERU_TZ) + timedelta(days=dias)
-    fecha_api = fecha.strftime("%Y%m%d")
-
-    for codigo_liga, nombre_liga in LIGAS_ESPN:
-        url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{codigo_liga}/scoreboard"
-
-        try:
-            r = requests.get(
-                url,
-                params={
-                    "dates": fecha_api,
-                    "limit": 100,
-                    "region": "pe",
-                    "lang": "es"
-                },
-                headers={"User-Agent": "Mozilla/5.0"},
-                timeout=20
+            val formatos = listOf(
+                SimpleDateFormat("dd/MM h:mm a", Locale.US),
+                SimpleDateFormat("dd/MM h:mm a", Locale("es", "PE")),
+                SimpleDateFormat("dd/MM H:mm", Locale.US),
+                SimpleDateFormat("dd/MM HH:mm", Locale.US)
             )
 
-            data = r.json()
-            eventos = data.get("events", [])
+            var calPartido: Calendar? = null
 
-            for evento in eventos:
-                competidores = evento.get("competitions", [{}])[0].get("competitors", [])
+            for (formato in formatos) {
+                try {
+                    val fechaParseada = formato.parse("$fecha $hora")
+                    if (fechaParseada != null) {
+                        calPartido = Calendar.getInstance()
+                        calPartido.time = fechaParseada
+                        calPartido.set(Calendar.YEAR, actualYear)
+                        break
+                    }
+                } catch (_: Exception) {
+                }
+            }
 
-                if len(competidores) < 2:
-                    continue
+            if (calPartido == null) {
+                return false
+            }
 
-                home = next((c for c in competidores if c.get("homeAway") == "home"), competidores[0])
-                away = next((c for c in competidores if c.get("homeAway") == "away"), competidores[1])
+            // Desaparece 2 horas después de la hora de inicio
+            calPartido.add(Calendar.HOUR_OF_DAY, 2)
 
-                local = limpiar(home.get("team", {}).get("displayName"))
-                visitante = limpiar(away.get("team", {}).get("displayName"))
+            val ahora = Calendar.getInstance()
 
-                if not local or not visitante:
-                    continue
+            ahora.after(calPartido)
 
-                texto = f"{nombre_liga} {local} {visitante}".lower()
-
-                if any(x in texto for x in ["women", "femenino", "u17", "u18", "u19", "u20", "u21", "u23"]):
-                    continue
-
-                estado = estado_espn(evento.get("status", {}).get("type", {}))
-
-                if estado == "Finalizado":
-                    continue
-
-                dt_peru, hora, fecha_app = convertir_fecha_hora_peru(evento.get("date", ""))
-
-                if partido_ya_paso(dt_peru, estado):
-                    continue
-
-                partidos.append({
-                    "id": len(partidos) + 1,
-                    "liga": nombre_liga,
-                    "hora": hora,
-                    "fecha": fecha_app,
-                    "equipoLocal": local,
-                    "equipoVisitante": visitante,
-                    "logoLocal": home.get("team", {}).get("logo", ""),
-                    "logoVisitante": away.get("team", {}).get("logo", ""),
-                    "estado": estado,
-                    "videoUrl": buscar_video(local, visitante, anteriores)
-                })
-
-        except Exception as e:
-            print("Error ESPN API:", codigo_liga, e)
-
-with open("partidos.json", "w", encoding="utf-8") as f:
-    json.dump(partidos, f, ensure_ascii=False, indent=2)
-
-print("Partidos ESPN API actualizados:", len(partidos))
+        } catch (e: Exception) {
+            false
+        }
+    }
+}

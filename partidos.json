@@ -2,6 +2,18 @@
   {
     "id": 1,
     "liga": "Amistoso",
+    "hora": "9:00 PM",
+    "fecha": "08/06",
+    "equipoLocal": "Perú",
+    "equipoVisitante": "España",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/per.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+    "estado": "Programado",
+    "videoUrl": ""
+  },
+  {
+    "id": 2,
+    "liga": "Amistoso",
     "hora": "5:00 AM",
     "fecha": "09/06",
     "equipoLocal": "Camboya",
@@ -12,7 +24,7 @@
     "videoUrl": ""
   },
   {
-    "id": 2,
+    "id": 3,
     "liga": "Amistoso",
     "hora": "6:30 AM",
     "fecha": "09/06",
@@ -24,7 +36,7 @@
     "videoUrl": ""
   },
   {
-    "id": 3,
+    "id": 4,
     "liga": "Amistoso",
     "hora": "6:35 AM",
     "fecha": "09/06",
@@ -36,7 +48,7 @@
     "videoUrl": ""
   },
   {
-    "id": 4,
+    "id": 5,
     "liga": "Amistoso",
     "hora": "7:00 AM",
     "fecha": "09/06",
@@ -48,7 +60,7 @@
     "videoUrl": ""
   },
   {
-    "id": 5,
+    "id": 6,
     "liga": "Amistoso",
     "hora": "7:00 AM",
     "fecha": "09/06",
@@ -60,7 +72,7 @@
     "videoUrl": ""
   },
   {
-    "id": 6,
+    "id": 7,
     "liga": "Amistoso",
     "hora": "7:00 AM",
     "fecha": "09/06",
@@ -72,7 +84,7 @@
     "videoUrl": ""
   },
   {
-    "id": 7,
+    "id": 8,
     "liga": "Amistoso",
     "hora": "8:00 AM",
     "fecha": "09/06",
@@ -84,7 +96,7 @@
     "videoUrl": ""
   },
   {
-    "id": 8,
+    "id": 9,
     "liga": "Amistoso",
     "hora": "9:00 AM",
     "fecha": "09/06",
@@ -96,7 +108,7 @@
     "videoUrl": ""
   },
   {
-    "id": 9,
+    "id": 10,
     "liga": "Amistoso",
     "hora": "9:30 AM",
     "fecha": "09/06",
@@ -108,7 +120,7 @@
     "videoUrl": ""
   },
   {
-    "id": 10,
+    "id": 11,
     "liga": "Amistoso",
     "hora": "10:00 AM",
     "fecha": "09/06",
@@ -120,7 +132,7 @@
     "videoUrl": ""
   },
   {
-    "id": 11,
+    "id": 12,
     "liga": "Amistoso",
     "hora": "11:00 AM",
     "fecha": "09/06",
@@ -132,7 +144,7 @@
     "videoUrl": ""
   },
   {
-    "id": 12,
+    "id": 13,
     "liga": "Amistoso",
     "hora": "11:00 AM",
     "fecha": "09/06",
@@ -144,7 +156,7 @@
     "videoUrl": ""
   },
   {
-    "id": 13,
+    "id": 14,
     "liga": "Amistoso",
     "hora": "11:00 AM",
     "fecha": "09/06",
@@ -156,7 +168,7 @@
     "videoUrl": ""
   },
   {
-    "id": 14,
+    "id": 15,
     "liga": "Amistoso",
     "hora": "11:30 AM",
     "fecha": "09/06",
@@ -168,7 +180,7 @@
     "videoUrl": ""
   },
   {
-    "id": 15,
+    "id": 16,
     "liga": "Amistoso",
     "hora": "12:00 PM",
     "fecha": "09/06",
@@ -180,7 +192,7 @@
     "videoUrl": ""
   },
   {
-    "id": 16,
+    "id": 17,
     "liga": "Amistoso",
     "hora": "12:00 PM",
     "fecha": "09/06",
@@ -192,7 +204,7 @@
     "videoUrl": ""
   },
   {
-    "id": 17,
+    "id": 18,
     "liga": "Amistoso",
     "hora": "1:00 PM",
     "fecha": "09/06",
@@ -204,7 +216,7 @@
     "videoUrl": ""
   },
   {
-    "id": 18,
+    "id": 19,
     "liga": "Amistoso",
     "hora": "6:00 PM",
     "fecha": "09/06",
@@ -216,7 +228,7 @@
     "videoUrl": ""
   },
   {
-    "id": 19,
+    "id": 20,
     "liga": "Amistoso",
     "hora": "8:00 PM",
     "fecha": "09/06",
@@ -228,7 +240,7 @@
     "videoUrl": ""
   },
   {
-    "id": 20,
+    "id": 21,
     "liga": "Amistoso",
     "hora": "8:00 PM",
     "fecha": "09/06",
@@ -240,7 +252,7 @@
     "videoUrl": ""
   },
   {
-    "id": 21,
+    "id": 22,
     "liga": "Amistoso",
     "hora": "2:45 PM",
     "fecha": "10/06",
@@ -252,7 +264,7 @@
     "videoUrl": ""
   },
   {
-    "id": 22,
+    "id": 23,
     "liga": "Amistoso",
     "hora": "3:00 PM",
     "fecha": "10/06",
@@ -264,7 +276,7 @@
     "videoUrl": ""
   },
   {
-    "id": 23,
+    "id": 24,
     "liga": "Amistoso",
     "hora": "7:00 PM",
     "fecha": "10/06",
@@ -276,10 +288,10 @@
     "videoUrl": ""
   },
   {
-    "id": 24,
+    "id": 25,
     "liga": "Amistoso",
     "hora": "11:00 PM",
-    "fecha": "11/06",
+    "fecha": "10/06",
     "equipoLocal": "Austria",
     "equipoVisitante": "Guatemala",
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
@@ -288,7 +300,7 @@
     "videoUrl": ""
   },
   {
-    "id": 25,
+    "id": 26,
     "liga": "Copa Mundial",
     "hora": "2:00 PM",
     "fecha": "11/06",
@@ -300,7 +312,7 @@
     "videoUrl": ""
   },
   {
-    "id": 26,
+    "id": 27,
     "liga": "Copa Mundial",
     "hora": "9:00 PM",
     "fecha": "11/06",
@@ -308,30 +320,6 @@
     "equipoVisitante": "Chequia",
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/kors.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
-    "estado": "Programado",
-    "videoUrl": ""
-  },
-  {
-    "id": 27,
-    "liga": "Copa Mundial",
-    "hora": "2:00 PM",
-    "fecha": "12/06",
-    "equipoLocal": "Canadá",
-    "equipoVisitante": "Bosnia y Herzegovina",
-    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
-    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/bih.png",
-    "estado": "Programado",
-    "videoUrl": ""
-  },
-  {
-    "id": 28,
-    "liga": "Copa Mundial",
-    "hora": "8:00 PM",
-    "fecha": "12/06",
-    "equipoLocal": "Estados Unidos",
-    "equipoVisitante": "Paraguay",
-    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/par.png",
     "estado": "Programado",
     "videoUrl": ""
   }

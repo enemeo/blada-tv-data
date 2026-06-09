@@ -8,7 +8,7 @@
     "equipoVisitante": "Chile",
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/rdc.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/chi.png",
-    "estado": "En progreso",
+    "estado": "Programado",
     "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   },
@@ -60,7 +60,7 @@
     "equipoVisitante": "Kazajistán",
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/hun.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/kaz.png",
-    "estado": "Programado",
+    "estado": "En progreso",
     "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   },
@@ -73,7 +73,7 @@
     "equipoVisitante": "Trinidad y Tobago",
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/rus.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/tri.png",
-    "estado": "Programado",
+    "estado": "En progreso",
     "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   },

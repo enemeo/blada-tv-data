@@ -209,7 +209,7 @@ for dias in range(0, 4):
                     "logoLocal": home.get("team", {}).get("logo", ""),
                     "logoVisitante": away.get("team", {}).get("logo", ""),
                     "estado": estado,
-                    "canal": "ESPN",
+                    "canal": "",
                     "videoUrl": buscar_video(
                         local,
                         visitante,

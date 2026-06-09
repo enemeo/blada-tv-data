@@ -1,6 +1,6 @@
 import json
 import requests
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 LIGAS_ESPN = [
     ("fifa.friendly", "Amistoso"),
@@ -14,6 +14,8 @@ LIGAS_ESPN = [
     ("ger.1", "Bundesliga"),
     ("fra.1", "Ligue 1")
 ]
+
+PERU_TZ = timezone(timedelta(hours=-5))
 
 def limpiar(texto):
     return (texto or "").strip()
@@ -40,21 +42,34 @@ def estado_espn(estado):
         return "En progreso"
     return "Programado"
 
-def convertir_hora_peru(fecha_hora):
+def convertir_fecha_hora_peru(fecha_hora):
     try:
-        dt = datetime.fromisoformat(fecha_hora.replace("Z", "+00:00"))
-        dt_peru = dt - timedelta(hours=5)
-        return dt_peru.strftime("%I:%M %p").lstrip("0")
+        dt_utc = datetime.fromisoformat(fecha_hora.replace("Z", "+00:00"))
+        dt_peru = dt_utc.astimezone(PERU_TZ)
+        hora = dt_peru.strftime("%I:%M %p").lstrip("0")
+        fecha = dt_peru.strftime("%d/%m")
+        return dt_peru, hora, fecha
     except:
-        return ""
+        return None, "", ""
+
+def partido_ya_paso(dt_peru, estado):
+    if estado == "En progreso":
+        return False
+
+    if not dt_peru:
+        return False
+
+    ahora_peru = datetime.now(PERU_TZ)
+
+    # elimina partidos 2 horas después de su hora de inicio
+    return ahora_peru > dt_peru + timedelta(hours=2)
 
 anteriores = cargar_anteriores()
 partidos = []
 
 for dias in range(0, 4):
-    fecha = datetime.now() + timedelta(days=dias)
+    fecha = datetime.now(PERU_TZ) + timedelta(days=dias)
     fecha_api = fecha.strftime("%Y%m%d")
-    fecha_app = fecha.strftime("%d/%m")
 
     for codigo_liga, nombre_liga in LIGAS_ESPN:
         url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{codigo_liga}/scoreboard"
@@ -100,7 +115,10 @@ for dias in range(0, 4):
                 if estado == "Finalizado":
                     continue
 
-                hora = convertir_hora_peru(evento.get("date", ""))
+                dt_peru, hora, fecha_app = convertir_fecha_hora_peru(evento.get("date", ""))
+
+                if partido_ya_paso(dt_peru, estado):
+                    continue
 
                 partidos.append({
                     "id": len(partidos) + 1,

@@ -8,8 +8,8 @@
     "equipoVisitante": "Chile",
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/rdc.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/chi.png",
-    "estado": "Programado",
-    "canal": "ESPN",
+    "estado": "En progreso",
+    "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   },
   {
@@ -22,7 +22,7 @@
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/tan.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/rwa.png",
     "estado": "Programado",
-    "canal": "ESPN",
+    "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   },
   {
@@ -35,7 +35,7 @@
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/blr.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/bka.png",
     "estado": "Programado",
-    "canal": "ESPN",
+    "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   },
   {
@@ -48,7 +48,7 @@
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/ang.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/10528.png",
     "estado": "Programado",
-    "canal": "ESPN",
+    "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   },
   {
@@ -61,7 +61,7 @@
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/hun.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/kaz.png",
     "estado": "Programado",
-    "canal": "ESPN",
+    "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   },
   {
@@ -74,7 +74,7 @@
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/rus.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/tri.png",
     "estado": "Programado",
-    "canal": "ESPN",
+    "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   },
   {
@@ -87,7 +87,7 @@
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/aze.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/smr.png",
     "estado": "Programado",
-    "canal": "ESPN",
+    "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   },
   {
@@ -100,7 +100,7 @@
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/ksa.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/sen.png",
     "estado": "Programado",
-    "canal": "ESPN",
+    "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   },
   {
@@ -113,7 +113,7 @@
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/isl.png",
     "estado": "Programado",
-    "canal": "ESPN",
+    "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   },
   {
@@ -126,7 +126,7 @@
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/irq.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/ven.png",
     "estado": "Programado",
-    "canal": "ESPN",
+    "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   },
   {
@@ -139,7 +139,7 @@
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/por.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/nga.png",
     "estado": "Programado",
-    "canal": "ESPN",
+    "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   },
   {
@@ -152,7 +152,7 @@
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/crc.png",
     "estado": "Programado",
-    "canal": "ESPN",
+    "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   },
   {
@@ -165,7 +165,7 @@
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/bol.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/alg.png",
     "estado": "Programado",
-    "canal": "ESPN",
+    "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   },
   {
@@ -178,7 +178,7 @@
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/gua.png",
     "estado": "Programado",
-    "canal": "ESPN",
+    "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   },
   {
@@ -191,7 +191,7 @@
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png",
     "estado": "Programado",
-    "canal": "ESPN",
+    "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   },
   {
@@ -204,7 +204,7 @@
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/kors.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
     "estado": "Programado",
-    "canal": "ESPN",
+    "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   },
   {
@@ -217,7 +217,7 @@
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/bih.png",
     "estado": "Programado",
-    "canal": "ESPN",
+    "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   },
   {
@@ -230,7 +230,7 @@
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/par.png",
     "estado": "Programado",
-    "canal": "ESPN",
+    "canal": "",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4Mi4yMDMuNTk=/13_.m3u8?token=shDWwxJx0KbhP2SbQ17TpQ&expires=1781056054"
   }
 ]

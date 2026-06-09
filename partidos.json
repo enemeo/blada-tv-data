@@ -2,19 +2,7 @@
   {
     "id": 1,
     "liga": "Amistoso",
-    "hora": "2026-06-09T02:00Z",
-    "fecha": "08/06",
-    "equipoLocal": "Perú",
-    "equipoVisitante": "España",
-    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/per.png",
-    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-    "estado": "Programado",
-    "videoUrl": ""
-  },
-  {
-    "id": 2,
-    "liga": "Amistoso",
-    "hora": "2026-06-09T10:00Z",
+    "hora": "5:00 AM",
     "fecha": "09/06",
     "equipoLocal": "Camboya",
     "equipoVisitante": "Hong Kong",
@@ -24,9 +12,9 @@
     "videoUrl": ""
   },
   {
-    "id": 3,
+    "id": 2,
     "liga": "Amistoso",
-    "hora": "2026-06-09T11:30Z",
+    "hora": "6:30 AM",
     "fecha": "09/06",
     "equipoLocal": "Filipinas",
     "equipoVisitante": "Birmania",
@@ -36,9 +24,9 @@
     "videoUrl": ""
   },
   {
-    "id": 4,
+    "id": 3,
     "liga": "Amistoso",
-    "hora": "2026-06-09T11:35Z",
+    "hora": "6:35 AM",
     "fecha": "09/06",
     "equipoLocal": "China",
     "equipoVisitante": "Tailandia",
@@ -48,9 +36,9 @@
     "videoUrl": ""
   },
   {
-    "id": 5,
+    "id": 4,
     "liga": "Amistoso",
-    "hora": "2026-06-09T12:00Z",
+    "hora": "7:00 AM",
     "fecha": "09/06",
     "equipoLocal": "Angola",
     "equipoVisitante": "República Centroafricana",
@@ -60,9 +48,9 @@
     "videoUrl": ""
   },
   {
-    "id": 6,
+    "id": 5,
     "liga": "Amistoso",
-    "hora": "2026-06-09T12:00Z",
+    "hora": "7:00 AM",
     "fecha": "09/06",
     "equipoLocal": "Ethiopia",
     "equipoVisitante": "Malawi",
@@ -72,9 +60,9 @@
     "videoUrl": ""
   },
   {
-    "id": 7,
+    "id": 6,
     "liga": "Amistoso",
-    "hora": "2026-06-09T12:00Z",
+    "hora": "7:00 AM",
     "fecha": "09/06",
     "equipoLocal": "Omán",
     "equipoVisitante": "Kuwait",
@@ -84,9 +72,9 @@
     "videoUrl": ""
   },
   {
-    "id": 8,
+    "id": 7,
     "liga": "Amistoso",
-    "hora": "2026-06-09T13:00Z",
+    "hora": "8:00 AM",
     "fecha": "09/06",
     "equipoLocal": "Indonesia",
     "equipoVisitante": "Mozambique",
@@ -96,9 +84,9 @@
     "videoUrl": ""
   },
   {
-    "id": 9,
+    "id": 8,
     "liga": "Amistoso",
-    "hora": "2026-06-09T14:00Z",
+    "hora": "9:00 AM",
     "fecha": "09/06",
     "equipoLocal": "Baréin",
     "equipoVisitante": "Siria",
@@ -108,9 +96,9 @@
     "videoUrl": ""
   },
   {
-    "id": 10,
+    "id": 9,
     "liga": "Amistoso",
-    "hora": "2026-06-09T14:30Z",
+    "hora": "9:30 AM",
     "fecha": "09/06",
     "equipoLocal": "Kirguistán",
     "equipoVisitante": "Palestina",
@@ -120,9 +108,9 @@
     "videoUrl": ""
   },
   {
-    "id": 11,
+    "id": 10,
     "liga": "Amistoso",
-    "hora": "2026-06-09T15:00Z",
+    "hora": "10:00 AM",
     "fecha": "09/06",
     "equipoLocal": "Armenia",
     "equipoVisitante": "Moldavia",
@@ -132,9 +120,9 @@
     "videoUrl": ""
   },
   {
-    "id": 12,
+    "id": 11,
     "liga": "Amistoso",
-    "hora": "2026-06-09T16:00Z",
+    "hora": "11:00 AM",
     "fecha": "09/06",
     "equipoLocal": "República Democrática del Congo",
     "equipoVisitante": "Chile",
@@ -144,9 +132,9 @@
     "videoUrl": ""
   },
   {
-    "id": 13,
+    "id": 12,
     "liga": "Amistoso",
-    "hora": "2026-06-09T16:00Z",
+    "hora": "11:00 AM",
     "fecha": "09/06",
     "equipoLocal": "Equatorial Guinea",
     "equipoVisitante": "Comoros",
@@ -156,9 +144,9 @@
     "videoUrl": ""
   },
   {
-    "id": 14,
+    "id": 13,
     "liga": "Amistoso",
-    "hora": "2026-06-09T16:00Z",
+    "hora": "11:00 AM",
     "fecha": "09/06",
     "equipoLocal": "Tanzania",
     "equipoVisitante": "Rwanda",
@@ -168,9 +156,9 @@
     "videoUrl": ""
   },
   {
-    "id": 15,
+    "id": 14,
     "liga": "Amistoso",
-    "hora": "2026-06-09T16:30Z",
+    "hora": "11:30 AM",
     "fecha": "09/06",
     "equipoLocal": "Bielorrusia",
     "equipoVisitante": "Burkina Faso",
@@ -180,9 +168,9 @@
     "videoUrl": ""
   },
   {
-    "id": 16,
+    "id": 15,
     "liga": "Amistoso",
-    "hora": "2026-06-09T17:00Z",
+    "hora": "12:00 PM",
     "fecha": "09/06",
     "equipoLocal": "Hungría",
     "equipoVisitante": "Kazajistán",
@@ -192,9 +180,9 @@
     "videoUrl": ""
   },
   {
-    "id": 17,
+    "id": 16,
     "liga": "Amistoso",
-    "hora": "2026-06-09T17:00Z",
+    "hora": "12:00 PM",
     "fecha": "09/06",
     "equipoLocal": "Rusia",
     "equipoVisitante": "Trinidad y Tobago",
@@ -204,9 +192,9 @@
     "videoUrl": ""
   },
   {
-    "id": 18,
+    "id": 17,
     "liga": "Amistoso",
-    "hora": "2026-06-09T18:00Z",
+    "hora": "1:00 PM",
     "fecha": "09/06",
     "equipoLocal": "Azerbaiyán",
     "equipoVisitante": "San Marino",
@@ -216,9 +204,9 @@
     "videoUrl": ""
   },
   {
-    "id": 19,
+    "id": 18,
     "liga": "Amistoso",
-    "hora": "2026-06-09T23:00Z",
+    "hora": "6:00 PM",
     "fecha": "09/06",
     "equipoLocal": "Arabia Saudita",
     "equipoVisitante": "Senegal",
@@ -228,9 +216,9 @@
     "videoUrl": ""
   },
   {
-    "id": 20,
+    "id": 19,
     "liga": "Amistoso",
-    "hora": "2026-06-10T01:00Z",
+    "hora": "8:00 PM",
     "fecha": "09/06",
     "equipoLocal": "Argentina",
     "equipoVisitante": "Islandia",
@@ -240,9 +228,9 @@
     "videoUrl": ""
   },
   {
-    "id": 21,
+    "id": 20,
     "liga": "Amistoso",
-    "hora": "2026-06-10T01:00Z",
+    "hora": "8:00 PM",
     "fecha": "09/06",
     "equipoLocal": "Irak",
     "equipoVisitante": "Venezuela",
@@ -252,9 +240,9 @@
     "videoUrl": ""
   },
   {
-    "id": 22,
+    "id": 21,
     "liga": "Amistoso",
-    "hora": "2026-06-10T19:45Z",
+    "hora": "2:45 PM",
     "fecha": "10/06",
     "equipoLocal": "Portugal",
     "equipoVisitante": "Nigeria",
@@ -264,9 +252,9 @@
     "videoUrl": ""
   },
   {
-    "id": 23,
+    "id": 22,
     "liga": "Amistoso",
-    "hora": "2026-06-10T20:00Z",
+    "hora": "3:00 PM",
     "fecha": "10/06",
     "equipoLocal": "Inglaterra",
     "equipoVisitante": "Costa Rica",
@@ -276,9 +264,9 @@
     "videoUrl": ""
   },
   {
-    "id": 24,
+    "id": 23,
     "liga": "Amistoso",
-    "hora": "2026-06-11T00:00Z",
+    "hora": "7:00 PM",
     "fecha": "10/06",
     "equipoLocal": "Bolívia",
     "equipoVisitante": "Argelia",
@@ -288,9 +276,9 @@
     "videoUrl": ""
   },
   {
-    "id": 25,
+    "id": 24,
     "liga": "Amistoso",
-    "hora": "2026-06-11T04:00Z",
+    "hora": "11:00 PM",
     "fecha": "11/06",
     "equipoLocal": "Austria",
     "equipoVisitante": "Guatemala",
@@ -300,9 +288,9 @@
     "videoUrl": ""
   },
   {
-    "id": 26,
+    "id": 25,
     "liga": "Copa Mundial",
-    "hora": "2026-06-11T19:00Z",
+    "hora": "2:00 PM",
     "fecha": "11/06",
     "equipoLocal": "México",
     "equipoVisitante": "Sudáfrica",
@@ -312,14 +300,38 @@
     "videoUrl": ""
   },
   {
-    "id": 27,
+    "id": 26,
     "liga": "Copa Mundial",
-    "hora": "2026-06-12T02:00Z",
+    "hora": "9:00 PM",
     "fecha": "11/06",
     "equipoLocal": "Corea del Sur",
     "equipoVisitante": "Chequia",
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/kors.png",
     "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
+    "estado": "Programado",
+    "videoUrl": ""
+  },
+  {
+    "id": 27,
+    "liga": "Copa Mundial",
+    "hora": "2:00 PM",
+    "fecha": "12/06",
+    "equipoLocal": "Canadá",
+    "equipoVisitante": "Bosnia y Herzegovina",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/bih.png",
+    "estado": "Programado",
+    "videoUrl": ""
+  },
+  {
+    "id": 28,
+    "liga": "Copa Mundial",
+    "hora": "8:00 PM",
+    "fecha": "12/06",
+    "equipoLocal": "Estados Unidos",
+    "equipoVisitante": "Paraguay",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/par.png",
     "estado": "Programado",
     "videoUrl": ""
   }

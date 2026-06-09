@@ -1,0 +1,12 @@
+{
+  "name": "blada-tv-m3u8-auto",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "actualizar:m3u8": "node scripts/actualizar_m3u8.js"
+  },
+  "dependencies": {
+    "playwright": "^1.44.1"
+  }
+}

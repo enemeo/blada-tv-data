@@ -1,0 +1,10 @@
+{
+  "ESPN": {
+    "url": "https://TU-PAGINA-AUTORIZADA/espn-en-vivo",
+    "esperarMs": 12000
+  },
+  "ESPN2": {
+    "url": "https://TU-PAGINA-AUTORIZADA/espn2-en-vivo",
+    "esperarMs": 12000
+  }
+}

@@ -13,6 +13,12 @@ function normalizarUrl(url) {
     .replace(/&amp;/g, "&");
 }
 
+function normalizarCanal(canal) {
+  return String(canal || "")
+    .trim()
+    .toUpperCase();
+}
+
 function esM3U8(url) {
   return typeof url === "string" && url.toLowerCase().includes(".m3u8");
 }
@@ -33,9 +39,11 @@ async function guardarJson(ruta, data) {
 
 function obtenerUrlFuente(config) {
   if (typeof config === "string") return config;
+
   if (config && typeof config === "object") {
     return config.url || config.pagina || "";
   }
+
   return "";
 }
 
@@ -43,6 +51,7 @@ function obtenerEspera(config) {
   if (config && typeof config === "object" && config.esperarMs) {
     return Number(config.esperarMs);
   }
+
   return 18000;
 }
 
@@ -98,6 +107,7 @@ async function buscarM3U8DeCanal(browser, canal, config) {
 
   const capturar = (url) => {
     const limpio = normalizarUrl(url);
+
     if (esM3U8(limpio)) {
       console.log(`📡 Detectado ${canal}: ${limpio}`);
       encontrados.add(limpio);
@@ -116,13 +126,11 @@ async function buscarM3U8DeCanal(browser, canal, config) {
 
     await page.waitForTimeout(5000);
 
-    // Algunos reproductores cargan el M3U8 solo después de tocar Play.
     try {
       await page.mouse.click(680, 380);
       await page.waitForTimeout(5000);
     } catch {}
 
-    // Intenta detectar botones de play comunes.
     try {
       const posiblesBotones = [
         "button",
@@ -134,6 +142,7 @@ async function buscarM3U8DeCanal(browser, canal, config) {
 
       for (const selector of posiblesBotones) {
         const elemento = await page.$(selector);
+
         if (elemento) {
           await elemento.click({ timeout: 3000 }).catch(() => {});
           await page.waitForTimeout(3000);
@@ -141,15 +150,16 @@ async function buscarM3U8DeCanal(browser, canal, config) {
       }
     } catch {}
 
-    // Revisa HTML principal.
     try {
       const html = await page.content();
       const regex = /https?:\/\/[^"'\\\s<>]+?\.m3u8[^"'\\\s<>]*/gi;
       const matches = html.match(regex) || [];
-      for (const link of matches) capturar(link);
+
+      for (const link of matches) {
+        capturar(link);
+      }
     } catch {}
 
-    // Revisa iframes.
     for (const frame of page.frames()) {
       try {
         capturar(frame.url());
@@ -157,17 +167,20 @@ async function buscarM3U8DeCanal(browser, canal, config) {
         const htmlFrame = await frame.content();
         const regex = /https?:\/\/[^"'\\\s<>]+?\.m3u8[^"'\\\s<>]*/gi;
         const matches = htmlFrame.match(regex) || [];
-        for (const link of matches) capturar(link);
+
+        for (const link of matches) {
+          capturar(link);
+        }
       } catch {}
     }
 
-    // Espera final para capturar peticiones tardías de hls.js.
     await page.waitForTimeout(esperarMs);
   } catch (error) {
     console.log(`❌ ${canal}: ${error.message}`);
   }
 
   const lista = Array.from(encontrados);
+
   console.log(`📺 ${canal}: encontrados ${lista.length} enlaces m3u8`);
 
   for (const link of lista) {
@@ -191,6 +204,20 @@ async function buscarM3U8DeCanal(browser, canal, config) {
   return null;
 }
 
+function normalizarMapaCanales(canales) {
+  const normalizados = {};
+
+  for (const [nombre, url] of Object.entries(canales || {})) {
+    const clave = normalizarCanal(nombre);
+
+    if (clave) {
+      normalizados[clave] = url || "";
+    }
+  }
+
+  return normalizados;
+}
+
 async function actualizarPartidos(canales) {
   const partidos = await leerJson(ARCHIVO_PARTIDOS, []);
 
@@ -199,17 +226,30 @@ async function actualizarPartidos(canales) {
     return;
   }
 
+  const canalesNormalizados = normalizarMapaCanales(canales);
+
+  console.log("📺 Canales disponibles para partidos:");
+  console.log(JSON.stringify(canalesNormalizados, null, 2));
+
   let cambios = false;
 
   const actualizados = partidos.map((partido) => {
-    const canal = partido.canal;
+    const canalPartido = normalizarCanal(partido.canal);
 
-    if (canal && canales[canal]) {
-      if (partido.videoUrl !== canales[canal]) {
+    if (canalPartido && canalesNormalizados[canalPartido]) {
+      const nuevoVideoUrl = canalesNormalizados[canalPartido];
+
+      if (partido.videoUrl !== nuevoVideoUrl) {
         cambios = true;
+
+        console.log(
+          `🔗 Actualizando partido ${partido.id || ""}: ${partido.equipoLocal || ""} vs ${partido.equipoVisitante || ""} → ${canalPartido}`
+        );
+
         return {
           ...partido,
-          videoUrl: canales[canal]
+          canal: canalPartido,
+          videoUrl: nuevoVideoUrl
         };
       }
     }
@@ -235,7 +275,9 @@ async function main() {
 
   const nuevosCanales = { ...canalesActuales };
 
-  for (const [canal, config] of Object.entries(fuentes)) {
+  for (const [canalOriginal, config] of Object.entries(fuentes)) {
+    const canal = normalizarCanal(canalOriginal);
+
     const m3u8 = await buscarM3U8DeCanal(browser, canal, config);
 
     if (m3u8) {
@@ -247,11 +289,13 @@ async function main() {
 
   await browser.close();
 
-  await guardarJson(ARCHIVO_CANALES, nuevosCanales);
-  await actualizarPartidos(nuevosCanales);
+  const nuevosCanalesNormalizados = normalizarMapaCanales(nuevosCanales);
+
+  await guardarJson(ARCHIVO_CANALES, nuevosCanalesNormalizados);
+  await actualizarPartidos(nuevosCanalesNormalizados);
 
   console.log("✅ canales_m3u8.json actualizado");
-  console.log(JSON.stringify(nuevosCanales, null, 2));
+  console.log(JSON.stringify(nuevosCanalesNormalizados, null, 2));
 }
 
 main().catch((error) => {

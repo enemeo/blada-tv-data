@@ -1,0 +1,39 @@
+name: Actualizar M3U8 Blada TV
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/30 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repo
+        uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Instalar Chromium Playwright
+        run: npx playwright install --with-deps chromium
+
+      - name: Buscar M3U8 y actualizar JSON
+        run: npm run actualizar:m3u8
+
+      - name: Guardar cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add canales_m3u8.json partidos.json
+          git commit -m "Actualizar enlaces M3U8" || echo "Sin cambios"
+          git push

@@ -32,15 +32,21 @@ def buscar_video(local, visitante, anteriores):
     return ""
 
 def estado_espn(estado):
-    nombre = estado.get("name", "")
-    detalle = estado.get("detail", "")
-    texto = f"{nombre} {detalle}".lower()
+    texto = f"{estado.get('name', '')} {estado.get('detail', '')}".lower()
 
     if "final" in texto:
         return "Finalizado"
     if "in progress" in texto or "halftime" in texto or "live" in texto:
         return "En progreso"
     return "Programado"
+
+def convertir_hora_peru(fecha_hora):
+    try:
+        dt = datetime.fromisoformat(fecha_hora.replace("Z", "+00:00"))
+        dt_peru = dt - timedelta(hours=5)
+        return dt_peru.strftime("%I:%M %p").lstrip("0")
+    except:
+        return ""
 
 anteriores = cargar_anteriores()
 partidos = []
@@ -85,7 +91,8 @@ for dias in range(0, 4):
                     continue
 
                 texto = f"{nombre_liga} {local} {visitante}".lower()
-                if any(x in texto for x in ["women", "u17", "u18", "u19", "u20", "u21", "u23"]):
+
+                if any(x in texto for x in ["women", "femenino", "u17", "u18", "u19", "u20", "u21", "u23"]):
                     continue
 
                 estado = estado_espn(evento.get("status", {}).get("type", {}))
@@ -93,7 +100,7 @@ for dias in range(0, 4):
                 if estado == "Finalizado":
                     continue
 
-                hora = evento.get("date", "")
+                hora = convertir_hora_peru(evento.get("date", ""))
 
                 partidos.append({
                     "id": len(partidos) + 1,

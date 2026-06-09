@@ -26,7 +26,7 @@
   {
     "id": 3,
     "liga": "Amistoso",
-    "hora": "5:00 AM",
+    "hora": "7:00 AM",
     "fecha": "09/06",
     "equipoLocal": "Camboya",
     "equipoVisitante": "Hong Kong",
@@ -98,7 +98,7 @@
   {
     "id": 9,
     "liga": "Amistoso",
-    "hora": "7:00 AM",
+    "hora": "10:00 AM",
     "fecha": "09/06",
     "equipoLocal": "Ethiopia",
     "equipoVisitante": "Malawi",
@@ -158,7 +158,7 @@
   {
     "id": 14,
     "liga": "Amistoso",
-    "hora": "7:00 AM",
+    "hora": "12:00 PM",
     "fecha": "09/06",
     "equipoLocal": "Angola",
     "equipoVisitante": "República Centroafricana",

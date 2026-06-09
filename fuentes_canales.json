@@ -1,10 +1,10 @@
 {
   "ESPN": {
-    "url": "https://TU-PAGINA-AUTORIZADA/espn-en-vivo",
+    "url": "https://www.tvporinternet2.com/espn-en-vivo-por-internet.php",
     "esperarMs": 12000
   },
   "ESPN2": {
-    "url": "https://TU-PAGINA-AUTORIZADA/espn2-en-vivo",
+    "url": "https://www.tvporinternet2.com/espn-en-vivo-por-internet.php",
     "esperarMs": 12000
   }
 }

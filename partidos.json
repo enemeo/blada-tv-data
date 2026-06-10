@@ -2,20 +2,6 @@
   {
     "id": 1,
     "liga": "Amistoso",
-    "hora": "4:00 PM",
-    "fecha": "10/06",
-    "equipoLocal": "Inglaterra",
-    "equipoVisitante": "Costa Rica",
-    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
-    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/crc.png",
-    "estado": "Programado",
-    "canal": "ESPN",
-    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMTAyLjIyMy4xOTM=/13_.m3u8?token=ozBh5-JSvQM5XcsYYd-mng&expires=1781165286"
-  },
-  {
-    "id": 2,
-    "liga": "Amistoso",
     "hora": "7:00 PM",
     "fecha": "10/06",
     "equipoLocal": "Bolívia",
@@ -25,10 +11,10 @@
     "estado": "Programado",
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMTAyLjIyMy4xOTM=/13_.m3u8?token=ozBh5-JSvQM5XcsYYd-mng&expires=1781165286"
+    "videoUrl": ""
   },
   {
-    "id": 3,
+    "id": 2,
     "liga": "Amistoso",
     "hora": "11:00 PM",
     "fecha": "10/06",
@@ -39,10 +25,10 @@
     "estado": "Programado",
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMTAyLjIyMy4xOTM=/13_.m3u8?token=ozBh5-JSvQM5XcsYYd-mng&expires=1781165286"
+    "videoUrl": ""
   },
   {
-    "id": 4,
+    "id": 3,
     "liga": "Copa Mundial",
     "hora": "2:00 PM",
     "fecha": "11/06",
@@ -53,10 +39,10 @@
     "estado": "Programado",
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMTAyLjIyMy4xOTM=/13_.m3u8?token=ozBh5-JSvQM5XcsYYd-mng&expires=1781165286"
+    "videoUrl": ""
   },
   {
-    "id": 5,
+    "id": 4,
     "liga": "Copa Mundial",
     "hora": "9:00 PM",
     "fecha": "11/06",
@@ -67,10 +53,10 @@
     "estado": "Programado",
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMTAyLjIyMy4xOTM=/13_.m3u8?token=ozBh5-JSvQM5XcsYYd-mng&expires=1781165286"
+    "videoUrl": ""
   },
   {
-    "id": 6,
+    "id": 5,
     "liga": "Copa Mundial",
     "hora": "2:00 PM",
     "fecha": "12/06",
@@ -81,10 +67,10 @@
     "estado": "Programado",
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMTAyLjIyMy4xOTM=/13_.m3u8?token=ozBh5-JSvQM5XcsYYd-mng&expires=1781165286"
+    "videoUrl": ""
   },
   {
-    "id": 7,
+    "id": 6,
     "liga": "Copa Mundial",
     "hora": "8:00 PM",
     "fecha": "12/06",
@@ -95,10 +81,10 @@
     "estado": "Programado",
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMTAyLjIyMy4xOTM=/13_.m3u8?token=ozBh5-JSvQM5XcsYYd-mng&expires=1781165286"
+    "videoUrl": ""
   },
   {
-    "id": 8,
+    "id": 7,
     "liga": "Copa Mundial",
     "hora": "2:00 PM",
     "fecha": "13/06",
@@ -109,10 +95,10 @@
     "estado": "Programado",
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMTAyLjIyMy4xOTM=/13_.m3u8?token=ozBh5-JSvQM5XcsYYd-mng&expires=1781165286"
+    "videoUrl": ""
   },
   {
-    "id": 9,
+    "id": 8,
     "liga": "Copa Mundial",
     "hora": "5:00 PM",
     "fecha": "13/06",
@@ -123,10 +109,10 @@
     "estado": "Programado",
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMTAyLjIyMy4xOTM=/13_.m3u8?token=ozBh5-JSvQM5XcsYYd-mng&expires=1781165286"
+    "videoUrl": ""
   },
   {
-    "id": 10,
+    "id": 9,
     "liga": "Copa Mundial",
     "hora": "8:00 PM",
     "fecha": "13/06",
@@ -137,6 +123,6 @@
     "estado": "Programado",
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMTAyLjIyMy4xOTM=/13_.m3u8?token=ozBh5-JSvQM5XcsYYd-mng&expires=1781165286"
+    "videoUrl": ""
   }
 ]

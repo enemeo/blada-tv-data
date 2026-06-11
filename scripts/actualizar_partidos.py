@@ -82,6 +82,22 @@ def partido_ya_paso(dt_peru, estado):
     return ahora > dt_peru + timedelta(hours=2)
 
 
+def obtener_marcador(home, away):
+    try:
+        goles_local = home.get("score", "0")
+        goles_visitante = away.get("score", "0")
+
+        if goles_local is None or goles_local == "":
+            goles_local = "0"
+
+        if goles_visitante is None or goles_visitante == "":
+            goles_visitante = "0"
+
+        return str(goles_local), str(goles_visitante)
+    except:
+        return "0", "0"
+
+
 anteriores = cargar_anteriores()
 partidos = []
 
@@ -112,7 +128,8 @@ for dias in range(0, 4):
             eventos = data.get("events", [])
 
             for evento in eventos:
-                competidores = evento.get("competitions", [{}])[0].get("competitors", [])
+                competicion = evento.get("competitions", [{}])[0]
+                competidores = competicion.get("competitors", [])
 
                 if len(competidores) < 2:
                     continue
@@ -175,8 +192,12 @@ for dias in range(0, 4):
                     FUENTE_DEFAULT
                 )
 
+                goles_local, goles_visitante = obtener_marcador(home, away)
+
                 partidos.append({
                     "id": len(partidos) + 1,
+                    "eventoId": evento.get("id", ""),
+                    "ligaCodigo": codigo_liga,
                     "liga": nombre_liga,
                     "hora": hora,
                     "fecha": fecha_app,
@@ -185,6 +206,8 @@ for dias in range(0, 4):
                     "logoLocal": home.get("team", {}).get("logo", ""),
                     "logoVisitante": away.get("team", {}).get("logo", ""),
                     "estado": estado,
+                    "golesLocal": goles_local,
+                    "golesVisitante": goles_visitante,
                     "canal": canal_anterior or CANAL_DEFAULT,
                     "fuenteUrl": fuente_anterior or FUENTE_DEFAULT,
                     "videoUrl": ""

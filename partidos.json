@@ -1,20 +1,6 @@
 [
   {
     "id": 1,
-    "liga": "Amistoso",
-    "hora": "11:00 PM",
-    "fecha": "10/06",
-    "equipoLocal": "Austria",
-    "equipoVisitante": "Guatemala",
-    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
-    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/gua.png",
-    "estado": "Programado",
-    "canal": "ESPN",
-    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTA0LjIwOS43LjMz/13_.m3u8?token=Eh8rQo7iRIzOG8Rufuh9OQ&expires=1781193591"
-  },
-  {
-    "id": 2,
     "liga": "Copa Mundial",
     "hora": "2:00 PM",
     "fecha": "11/06",
@@ -25,10 +11,10 @@
     "estado": "Programado",
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTA0LjIwOS43LjMz/13_.m3u8?token=Eh8rQo7iRIzOG8Rufuh9OQ&expires=1781193591"
+    "videoUrl": ""
   },
   {
-    "id": 3,
+    "id": 2,
     "liga": "Copa Mundial",
     "hora": "9:00 PM",
     "fecha": "11/06",
@@ -39,10 +25,10 @@
     "estado": "Programado",
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTA0LjIwOS43LjMz/13_.m3u8?token=Eh8rQo7iRIzOG8Rufuh9OQ&expires=1781193591"
+    "videoUrl": ""
   },
   {
-    "id": 4,
+    "id": 3,
     "liga": "Copa Mundial",
     "hora": "2:00 PM",
     "fecha": "12/06",
@@ -53,10 +39,10 @@
     "estado": "Programado",
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTA0LjIwOS43LjMz/13_.m3u8?token=Eh8rQo7iRIzOG8Rufuh9OQ&expires=1781193591"
+    "videoUrl": ""
   },
   {
-    "id": 5,
+    "id": 4,
     "liga": "Copa Mundial",
     "hora": "8:00 PM",
     "fecha": "12/06",
@@ -67,10 +53,10 @@
     "estado": "Programado",
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTA0LjIwOS43LjMz/13_.m3u8?token=Eh8rQo7iRIzOG8Rufuh9OQ&expires=1781193591"
+    "videoUrl": ""
   },
   {
-    "id": 6,
+    "id": 5,
     "liga": "Copa Mundial",
     "hora": "2:00 PM",
     "fecha": "13/06",
@@ -81,10 +67,10 @@
     "estado": "Programado",
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTA0LjIwOS43LjMz/13_.m3u8?token=Eh8rQo7iRIzOG8Rufuh9OQ&expires=1781193591"
+    "videoUrl": ""
   },
   {
-    "id": 7,
+    "id": 6,
     "liga": "Copa Mundial",
     "hora": "5:00 PM",
     "fecha": "13/06",
@@ -95,10 +81,10 @@
     "estado": "Programado",
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTA0LjIwOS43LjMz/13_.m3u8?token=Eh8rQo7iRIzOG8Rufuh9OQ&expires=1781193591"
+    "videoUrl": ""
   },
   {
-    "id": 8,
+    "id": 7,
     "liga": "Copa Mundial",
     "hora": "8:00 PM",
     "fecha": "13/06",
@@ -109,6 +95,76 @@
     "estado": "Programado",
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTA0LjIwOS43LjMz/13_.m3u8?token=Eh8rQo7iRIzOG8Rufuh9OQ&expires=1781193591"
+    "videoUrl": ""
+  },
+  {
+    "id": 8,
+    "liga": "Copa Mundial",
+    "hora": "11:00 PM",
+    "fecha": "13/06",
+    "equipoLocal": "Australia",
+    "equipoVisitante": "Turquía",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/tur.png",
+    "estado": "Programado",
+    "canal": "ESPN",
+    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
+    "videoUrl": ""
+  },
+  {
+    "id": 9,
+    "liga": "Copa Mundial",
+    "hora": "12:00 PM",
+    "fecha": "14/06",
+    "equipoLocal": "Alemania",
+    "equipoVisitante": "Curacao",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/11678.png",
+    "estado": "Programado",
+    "canal": "ESPN",
+    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
+    "videoUrl": ""
+  },
+  {
+    "id": 10,
+    "liga": "Copa Mundial",
+    "hora": "3:00 PM",
+    "fecha": "14/06",
+    "equipoLocal": "Países Bajos",
+    "equipoVisitante": "Japón",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
+    "estado": "Programado",
+    "canal": "ESPN",
+    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
+    "videoUrl": ""
+  },
+  {
+    "id": 11,
+    "liga": "Copa Mundial",
+    "hora": "6:00 PM",
+    "fecha": "14/06",
+    "equipoLocal": "Costa de Marfil",
+    "equipoVisitante": "Ecuador",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/civ.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png",
+    "estado": "Programado",
+    "canal": "ESPN",
+    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
+    "videoUrl": ""
+  },
+  {
+    "id": 12,
+    "liga": "Copa Mundial",
+    "hora": "9:00 PM",
+    "fecha": "14/06",
+    "equipoLocal": "Suecia",
+    "equipoVisitante": "Túnez",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/swe.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/tun.png",
+    "estado": "Programado",
+    "canal": "ESPN",
+    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
+    "videoUrl": ""
   }
 ]

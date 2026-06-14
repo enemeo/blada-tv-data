@@ -1,22 +1,22 @@
 [
   {
     "id": 1,
-    "eventoId": "760425",
+    "eventoId": "760422",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
-    "hora": "3:00 PM",
+    "hora": "12:00 PM",
     "fecha": "14/06",
-    "equipoLocal": "Países Bajos",
-    "equipoVisitante": "Japón",
-    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
-    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
-    "estado": "Programado",
-    "detalleEstado": "Dom, Junio 14º at 4:00 p. m. EDT",
-    "golesLocal": "0",
-    "golesVisitante": "0",
+    "equipoLocal": "Alemania",
+    "equipoVisitante": "Curacao",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/11678.png",
+    "estado": "En progreso",
+    "detalleEstado": "MT",
+    "golesLocal": "3",
+    "golesVisitante": "1",
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTM1LjIzMi4yMDEuNDk=/13_.m3u8?token=baWMSO9lpnuwfxsCW_xSqQ&expires=1781503947"
+    "videoUrl": ""
   },
   {
     "id": 2,

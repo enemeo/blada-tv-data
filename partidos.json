@@ -1,22 +1,22 @@
 [
   {
     "id": 1,
-    "eventoId": "760458",
+    "eventoId": "760461",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
-    "hora": "3:00 PM",
+    "hora": "12:00 PM",
     "fecha": "23/06",
-    "equipoLocal": "Inglaterra",
-    "equipoVisitante": "Ghana",
-    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
-    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/gha.png",
-    "estado": "Programado",
-    "detalleEstado": "Mar, Junio 23º at 4:00 p. m. EDT",
-    "golesLocal": "0",
+    "equipoLocal": "Portugal",
+    "equipoVisitante": "Uzbekistán",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/por.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/uzb.png",
+    "estado": "En progreso",
+    "detalleEstado": "45'+4'",
+    "golesLocal": "3",
     "golesVisitante": "0",
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE5MC4xMDIuMTUw/13_.m3u8?token=WKo7pvgO0B1iAOYVJVS8oA&expires=1782285149"
+    "videoUrl": ""
   },
   {
     "id": 2,

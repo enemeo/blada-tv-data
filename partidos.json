@@ -1,82 +1,6 @@
 [
   {
     "id": 1,
-    "eventoId": "760471",
-    "ligaCodigo": "fifa.world",
-    "liga": "Copa Mundial",
-    "hora": "6:00 PM",
-    "fecha": "25/06",
-    "equipoLocal": "Japón",
-    "equipoVisitante": "Suecia",
-    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
-    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/swe.png",
-    "estado": "En progreso",
-    "detalleEstado": "45'+1'",
-    "golesLocal": "0",
-    "golesVisitante": "0",
-    "canal": "ESPN",
-    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTI4LjI0LjE2MC4xNjE=/13_.m3u8?token=lVmTVx2bmyjMT0bfgvKxaQ&expires=1782477475"
-  },
-  {
-    "id": 2,
-    "eventoId": "760472",
-    "ligaCodigo": "fifa.world",
-    "liga": "Copa Mundial",
-    "hora": "6:00 PM",
-    "fecha": "25/06",
-    "equipoLocal": "Túnez",
-    "equipoVisitante": "Países Bajos",
-    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/tun.png",
-    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
-    "estado": "En progreso",
-    "detalleEstado": "45'+1'",
-    "golesLocal": "0",
-    "golesVisitante": "2",
-    "canal": "ESPN",
-    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTI4LjI0LjE2MC4xNjE=/13_.m3u8?token=lVmTVx2bmyjMT0bfgvKxaQ&expires=1782477475"
-  },
-  {
-    "id": 3,
-    "eventoId": "760469",
-    "ligaCodigo": "fifa.world",
-    "liga": "Copa Mundial",
-    "hora": "9:00 PM",
-    "fecha": "25/06",
-    "equipoLocal": "Paraguay",
-    "equipoVisitante": "Australia",
-    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/par.png",
-    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
-    "estado": "Programado",
-    "detalleEstado": "Jue, Junio 25º at 10:00 p. m. EDT",
-    "golesLocal": "0",
-    "golesVisitante": "0",
-    "canal": "ESPN",
-    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTI4LjI0LjE2MC4xNjE=/13_.m3u8?token=lVmTVx2bmyjMT0bfgvKxaQ&expires=1782477475"
-  },
-  {
-    "id": 4,
-    "eventoId": "760470",
-    "ligaCodigo": "fifa.world",
-    "liga": "Copa Mundial",
-    "hora": "9:00 PM",
-    "fecha": "25/06",
-    "equipoLocal": "Turquía",
-    "equipoVisitante": "Estados Unidos",
-    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/tur.png",
-    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-    "estado": "Programado",
-    "detalleEstado": "Jue, Junio 25º at 10:00 p. m. EDT",
-    "golesLocal": "0",
-    "golesVisitante": "0",
-    "canal": "ESPN",
-    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTI4LjI0LjE2MC4xNjE=/13_.m3u8?token=lVmTVx2bmyjMT0bfgvKxaQ&expires=1782477475"
-  },
-  {
-    "id": 5,
     "eventoId": "760475",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -95,7 +19,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTI4LjI0LjE2MC4xNjE=/13_.m3u8?token=lVmTVx2bmyjMT0bfgvKxaQ&expires=1782477475"
   },
   {
-    "id": 6,
+    "id": 2,
     "eventoId": "760474",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -114,7 +38,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTI4LjI0LjE2MC4xNjE=/13_.m3u8?token=lVmTVx2bmyjMT0bfgvKxaQ&expires=1782477475"
   },
   {
-    "id": 7,
+    "id": 3,
     "eventoId": "760478",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -133,7 +57,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTI4LjI0LjE2MC4xNjE=/13_.m3u8?token=lVmTVx2bmyjMT0bfgvKxaQ&expires=1782477475"
   },
   {
-    "id": 8,
+    "id": 4,
     "eventoId": "760479",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -152,7 +76,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTI4LjI0LjE2MC4xNjE=/13_.m3u8?token=lVmTVx2bmyjMT0bfgvKxaQ&expires=1782477475"
   },
   {
-    "id": 9,
+    "id": 5,
     "eventoId": "760476",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -171,7 +95,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTI4LjI0LjE2MC4xNjE=/13_.m3u8?token=lVmTVx2bmyjMT0bfgvKxaQ&expires=1782477475"
   },
   {
-    "id": 10,
+    "id": 6,
     "eventoId": "760477",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -190,7 +114,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTI4LjI0LjE2MC4xNjE=/13_.m3u8?token=lVmTVx2bmyjMT0bfgvKxaQ&expires=1782477475"
   },
   {
-    "id": 11,
+    "id": 7,
     "eventoId": "760480",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -209,7 +133,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTI4LjI0LjE2MC4xNjE=/13_.m3u8?token=lVmTVx2bmyjMT0bfgvKxaQ&expires=1782477475"
   },
   {
-    "id": 12,
+    "id": 8,
     "eventoId": "760485",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -228,7 +152,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTI4LjI0LjE2MC4xNjE=/13_.m3u8?token=lVmTVx2bmyjMT0bfgvKxaQ&expires=1782477475"
   },
   {
-    "id": 13,
+    "id": 9,
     "eventoId": "760481",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -247,7 +171,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTI4LjI0LjE2MC4xNjE=/13_.m3u8?token=lVmTVx2bmyjMT0bfgvKxaQ&expires=1782477475"
   },
   {
-    "id": 14,
+    "id": 10,
     "eventoId": "760482",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -266,7 +190,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTI4LjI0LjE2MC4xNjE=/13_.m3u8?token=lVmTVx2bmyjMT0bfgvKxaQ&expires=1782477475"
   },
   {
-    "id": 15,
+    "id": 11,
     "eventoId": "760484",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -285,7 +209,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTI4LjI0LjE2MC4xNjE=/13_.m3u8?token=lVmTVx2bmyjMT0bfgvKxaQ&expires=1782477475"
   },
   {
-    "id": 16,
+    "id": 12,
     "eventoId": "760483",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -304,7 +228,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTI4LjI0LjE2MC4xNjE=/13_.m3u8?token=lVmTVx2bmyjMT0bfgvKxaQ&expires=1782477475"
   },
   {
-    "id": 17,
+    "id": 13,
     "eventoId": "760486",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -321,5 +245,62 @@
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTI4LjI0LjE2MC4xNjE=/13_.m3u8?token=lVmTVx2bmyjMT0bfgvKxaQ&expires=1782477475"
+  },
+  {
+    "id": 14,
+    "eventoId": "760487",
+    "ligaCodigo": "fifa.world",
+    "liga": "Copa Mundial",
+    "hora": "12:00 PM",
+    "fecha": "29/06",
+    "equipoLocal": "Brasil",
+    "equipoVisitante": "Japón",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
+    "estado": "Programado",
+    "detalleEstado": "Lun, Junio 29º at 1:00 p. m. EDT",
+    "golesLocal": "0",
+    "golesVisitante": "0",
+    "canal": "ESPN",
+    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
+    "videoUrl": ""
+  },
+  {
+    "id": 15,
+    "eventoId": "760489",
+    "ligaCodigo": "fifa.world",
+    "liga": "Copa Mundial",
+    "hora": "3:30 PM",
+    "fecha": "29/06",
+    "equipoLocal": "Alemania",
+    "equipoVisitante": "Third Place Group A/B/C/D/F",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+    "logoVisitante": "",
+    "estado": "Programado",
+    "detalleEstado": "Lun, Junio 29º at 4:30 p. m. EDT",
+    "golesLocal": "0",
+    "golesVisitante": "0",
+    "canal": "ESPN",
+    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
+    "videoUrl": ""
+  },
+  {
+    "id": 16,
+    "eventoId": "760488",
+    "ligaCodigo": "fifa.world",
+    "liga": "Copa Mundial",
+    "hora": "8:00 PM",
+    "fecha": "29/06",
+    "equipoLocal": "Países Bajos",
+    "equipoVisitante": "Marruecos",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/mar.png",
+    "estado": "Programado",
+    "detalleEstado": "Lun, Junio 29º at 9:00 p. m. EDT",
+    "golesLocal": "0",
+    "golesVisitante": "0",
+    "canal": "ESPN",
+    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
+    "videoUrl": ""
   }
 ]

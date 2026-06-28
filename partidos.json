@@ -1,44 +1,6 @@
 [
   {
     "id": 1,
-    "eventoId": "760481",
-    "ligaCodigo": "fifa.world",
-    "liga": "Copa Mundial",
-    "hora": "6:30 PM",
-    "fecha": "27/06",
-    "equipoLocal": "Colombia",
-    "equipoVisitante": "Portugal",
-    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/col.png",
-    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/por.png",
-    "estado": "Programado",
-    "detalleEstado": "Sáb, Junio 27º at 7:30 p. m. EDT",
-    "golesLocal": "0",
-    "golesVisitante": "0",
-    "canal": "ESPN",
-    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMy4yMjEuMTg4/13_.m3u8?token=FMS-WvhZvVBhj-82qr9z2Q&expires=1782637311"
-  },
-  {
-    "id": 2,
-    "eventoId": "760482",
-    "ligaCodigo": "fifa.world",
-    "liga": "Copa Mundial",
-    "hora": "6:30 PM",
-    "fecha": "27/06",
-    "equipoLocal": "República Democrática del Congo",
-    "equipoVisitante": "Uzbekistán",
-    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/rdc.png",
-    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/uzb.png",
-    "estado": "Programado",
-    "detalleEstado": "Sáb, Junio 27º at 7:30 p. m. EDT",
-    "golesLocal": "0",
-    "golesVisitante": "0",
-    "canal": "ESPN",
-    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMy4yMjEuMTg4/13_.m3u8?token=FMS-WvhZvVBhj-82qr9z2Q&expires=1782637311"
-  },
-  {
-    "id": 3,
     "eventoId": "760484",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -57,7 +19,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMy4yMjEuMTg4/13_.m3u8?token=FMS-WvhZvVBhj-82qr9z2Q&expires=1782637311"
   },
   {
-    "id": 4,
+    "id": 2,
     "eventoId": "760483",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -76,7 +38,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMy4yMjEuMTg4/13_.m3u8?token=FMS-WvhZvVBhj-82qr9z2Q&expires=1782637311"
   },
   {
-    "id": 5,
+    "id": 3,
     "eventoId": "760486",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -95,7 +57,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMy4yMjEuMTg4/13_.m3u8?token=FMS-WvhZvVBhj-82qr9z2Q&expires=1782637311"
   },
   {
-    "id": 6,
+    "id": 4,
     "eventoId": "760487",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -114,7 +76,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMy4yMjEuMTg4/13_.m3u8?token=FMS-WvhZvVBhj-82qr9z2Q&expires=1782637311"
   },
   {
-    "id": 7,
+    "id": 5,
     "eventoId": "760489",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -133,7 +95,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMy4yMjEuMTg4/13_.m3u8?token=FMS-WvhZvVBhj-82qr9z2Q&expires=1782637311"
   },
   {
-    "id": 8,
+    "id": 6,
     "eventoId": "760488",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -152,7 +114,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMy4yMjEuMTg4/13_.m3u8?token=FMS-WvhZvVBhj-82qr9z2Q&expires=1782637311"
   },
   {
-    "id": 9,
+    "id": 7,
     "eventoId": "760490",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -171,7 +133,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMy4yMjEuMTg4/13_.m3u8?token=FMS-WvhZvVBhj-82qr9z2Q&expires=1782637311"
   },
   {
-    "id": 10,
+    "id": 8,
     "eventoId": "760492",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -190,22 +152,22 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMy4yMjEuMTg4/13_.m3u8?token=FMS-WvhZvVBhj-82qr9z2Q&expires=1782637311"
   },
   {
-    "id": 11,
+    "id": 9,
     "eventoId": "760491",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
     "hora": "8:00 PM",
     "fecha": "30/06",
     "equipoLocal": "México",
-    "equipoVisitante": "Third Place Group C/E/F/H/I",
+    "equipoVisitante": "Ecuador",
     "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
-    "logoVisitante": "",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png",
     "estado": "Programado",
     "detalleEstado": "Mar, Junio 30º at 9:00 p. m. EDT",
     "golesLocal": "0",
     "golesVisitante": "0",
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMy4yMjEuMTg4/13_.m3u8?token=FMS-WvhZvVBhj-82qr9z2Q&expires=1782637311"
+    "videoUrl": ""
   }
 ]

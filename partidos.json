@@ -1,25 +1,6 @@
 [
   {
     "id": 1,
-    "eventoId": "760495",
-    "ligaCodigo": "fifa.world",
-    "liga": "Copa Mundial",
-    "hora": "11:00 AM",
-    "fecha": "01/07",
-    "equipoLocal": "Inglaterra",
-    "equipoVisitante": "República Democrática del Congo",
-    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
-    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/rdc.png",
-    "estado": "Programado",
-    "detalleEstado": "Mié, Julio 1º at 12:00 p. m. EDT",
-    "golesLocal": "0",
-    "golesVisitante": "0",
-    "canal": "ESPN",
-    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/NTIuMjQwLjE3Ni4xNjU=/13_.m3u8?token=7OrA2yNwz3l6JrxrSr9bVw&expires=1782958394"
-  },
-  {
-    "id": 2,
     "eventoId": "760493",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -38,7 +19,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/NTIuMjQwLjE3Ni4xNjU=/13_.m3u8?token=7OrA2yNwz3l6JrxrSr9bVw&expires=1782958394"
   },
   {
-    "id": 3,
+    "id": 2,
     "eventoId": "760494",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -57,7 +38,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/NTIuMjQwLjE3Ni4xNjU=/13_.m3u8?token=7OrA2yNwz3l6JrxrSr9bVw&expires=1782958394"
   },
   {
-    "id": 4,
+    "id": 3,
     "eventoId": "760497",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -76,7 +57,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/NTIuMjQwLjE3Ni4xNjU=/13_.m3u8?token=7OrA2yNwz3l6JrxrSr9bVw&expires=1782958394"
   },
   {
-    "id": 5,
+    "id": 4,
     "eventoId": "760496",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -95,7 +76,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/NTIuMjQwLjE3Ni4xNjU=/13_.m3u8?token=7OrA2yNwz3l6JrxrSr9bVw&expires=1782958394"
   },
   {
-    "id": 6,
+    "id": 5,
     "eventoId": "760498",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -114,7 +95,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/NTIuMjQwLjE3Ni4xNjU=/13_.m3u8?token=7OrA2yNwz3l6JrxrSr9bVw&expires=1782958394"
   },
   {
-    "id": 7,
+    "id": 6,
     "eventoId": "760499",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -133,7 +114,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/NTIuMjQwLjE3Ni4xNjU=/13_.m3u8?token=7OrA2yNwz3l6JrxrSr9bVw&expires=1782958394"
   },
   {
-    "id": 8,
+    "id": 7,
     "eventoId": "760500",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -152,7 +133,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/NTIuMjQwLjE3Ni4xNjU=/13_.m3u8?token=7OrA2yNwz3l6JrxrSr9bVw&expires=1782958394"
   },
   {
-    "id": 9,
+    "id": 8,
     "eventoId": "760501",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -171,7 +152,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/NTIuMjQwLjE3Ni4xNjU=/13_.m3u8?token=7OrA2yNwz3l6JrxrSr9bVw&expires=1782958394"
   },
   {
-    "id": 10,
+    "id": 9,
     "eventoId": "760502",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -190,7 +171,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/NTIuMjQwLjE3Ni4xNjU=/13_.m3u8?token=7OrA2yNwz3l6JrxrSr9bVw&expires=1782958394"
   },
   {
-    "id": 11,
+    "id": 10,
     "eventoId": "760503",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",

@@ -112,5 +112,43 @@
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTI4LjI0LjE2My45Nw==/13_.m3u8?token=8j02ABMp1b8BMQfb1UqFvA&expires=1783178407"
+  },
+  {
+    "id": 7,
+    "eventoId": "760509",
+    "ligaCodigo": "fifa.world",
+    "liga": "Copa Mundial",
+    "hora": "11:00 AM",
+    "fecha": "07/07",
+    "equipoLocal": "Argentina",
+    "equipoVisitante": "Egipto",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/egy.png",
+    "estado": "Programado",
+    "detalleEstado": "Mar, Julio 7º at 12:00 p. m. EDT",
+    "golesLocal": "0",
+    "golesVisitante": "0",
+    "canal": "ESPN",
+    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
+    "videoUrl": ""
+  },
+  {
+    "id": 8,
+    "eventoId": "760508",
+    "ligaCodigo": "fifa.world",
+    "liga": "Copa Mundial",
+    "hora": "3:00 PM",
+    "fecha": "07/07",
+    "equipoLocal": "Suiza",
+    "equipoVisitante": "Colombia",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/col.png",
+    "estado": "Programado",
+    "detalleEstado": "Mar, Julio 7º at 4:00 p. m. EDT",
+    "golesLocal": "0",
+    "golesVisitante": "0",
+    "canal": "ESPN",
+    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
+    "videoUrl": ""
   }
 ]

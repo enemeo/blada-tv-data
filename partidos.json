@@ -1,22 +1,22 @@
 [
   {
     "id": 1,
-    "eventoId": "760502",
+    "eventoId": "760503",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
-    "hora": "12:00 PM",
+    "hora": "4:00 PM",
     "fecha": "04/07",
-    "equipoLocal": "Canadá",
-    "equipoVisitante": "Marruecos",
-    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
-    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/mar.png",
+    "equipoLocal": "Paraguay",
+    "equipoVisitante": "Francia",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/par.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
     "estado": "En progreso",
-    "detalleEstado": "MT",
+    "detalleEstado": "90'+1'",
     "golesLocal": "0",
-    "golesVisitante": "0",
+    "golesVisitante": "1",
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/NC4yMjcuMTM1LjE0Nw==/13_.m3u8?token=5Jf17EiB83HB2HHb2LKq-A&expires=1783254007"
+    "videoUrl": ""
   },
   {
     "id": 2,

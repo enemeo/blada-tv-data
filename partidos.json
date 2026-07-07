@@ -55,5 +55,24 @@
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/NjguMjIwLjYxLjIxMQ==/13_.m3u8?token=iauSQp_bRX5YKfiF-9MwIA&expires=1783445806"
+  },
+  {
+    "id": 4,
+    "eventoId": "760511",
+    "ligaCodigo": "fifa.world",
+    "liga": "Copa Mundial",
+    "hora": "2:00 PM",
+    "fecha": "10/07",
+    "equipoLocal": "España",
+    "equipoVisitante": "Bélgica",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/bel.png",
+    "estado": "Programado",
+    "detalleEstado": "Vie, Julio 10º at 3:00 p. m. EDT",
+    "golesLocal": "0",
+    "golesVisitante": "0",
+    "canal": "ESPN",
+    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
+    "videoUrl": ""
   }
 ]

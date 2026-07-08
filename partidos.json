@@ -36,5 +36,43 @@
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/NjguMTU0LjM4LjE3/13_.m3u8?token=Jxkvp3E_8IRpmvv_H8XH-Q&expires=1783533373"
+  },
+  {
+    "id": 3,
+    "eventoId": "760512",
+    "ligaCodigo": "fifa.world",
+    "liga": "Copa Mundial",
+    "hora": "4:00 PM",
+    "fecha": "11/07",
+    "equipoLocal": "Noruega",
+    "equipoVisitante": "Inglaterra",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/nor.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
+    "estado": "Programado",
+    "detalleEstado": "Sáb, Julio 11º at 5:00 p. m. EDT",
+    "golesLocal": "0",
+    "golesVisitante": "0",
+    "canal": "ESPN",
+    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
+    "videoUrl": ""
+  },
+  {
+    "id": 4,
+    "eventoId": "760513",
+    "ligaCodigo": "fifa.world",
+    "liga": "Copa Mundial",
+    "hora": "8:00 PM",
+    "fecha": "11/07",
+    "equipoLocal": "Argentina",
+    "equipoVisitante": "Suiza",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
+    "estado": "Programado",
+    "detalleEstado": "Sáb, Julio 11º at 9:00 p. m. EDT",
+    "golesLocal": "0",
+    "golesVisitante": "0",
+    "canal": "ESPN",
+    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
+    "videoUrl": ""
   }
 ]

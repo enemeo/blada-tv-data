@@ -1,25 +1,6 @@
 [
   {
     "id": 1,
-    "eventoId": "760508",
-    "ligaCodigo": "fifa.world",
-    "liga": "Copa Mundial",
-    "hora": "3:00 PM",
-    "fecha": "07/07",
-    "equipoLocal": "Suiza",
-    "equipoVisitante": "Colombia",
-    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
-    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/col.png",
-    "estado": "En progreso",
-    "detalleEstado": "Penales",
-    "golesLocal": "0",
-    "golesVisitante": "0",
-    "canal": "ESPN",
-    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/NTIuMjI0LjI0Ny4xNjU=/13_.m3u8?token=lEfHveQxgpeRmfTCg8dbOQ&expires=1783522638"
-  },
-  {
-    "id": 2,
     "eventoId": "760510",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -38,7 +19,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/NTIuMjI0LjI0Ny4xNjU=/13_.m3u8?token=lEfHveQxgpeRmfTCg8dbOQ&expires=1783522638"
   },
   {
-    "id": 3,
+    "id": 2,
     "eventoId": "760511",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",

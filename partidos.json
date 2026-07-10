@@ -1,25 +1,6 @@
 [
   {
     "id": 1,
-    "eventoId": "760511",
-    "ligaCodigo": "fifa.world",
-    "liga": "Copa Mundial",
-    "hora": "2:00 PM",
-    "fecha": "10/07",
-    "equipoLocal": "España",
-    "equipoVisitante": "Bélgica",
-    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/bel.png",
-    "estado": "En progreso",
-    "detalleEstado": "21'",
-    "golesLocal": "0",
-    "golesVisitante": "0",
-    "canal": "ESPN",
-    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMTYxLjMwLjQ4/13_.m3u8?token=EIpyrqK1jN2OFdLsOlRB0w&expires=1783764092"
-  },
-  {
-    "id": 2,
     "eventoId": "760512",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -38,7 +19,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMTYxLjMwLjQ4/13_.m3u8?token=EIpyrqK1jN2OFdLsOlRB0w&expires=1783764092"
   },
   {
-    "id": 3,
+    "id": 2,
     "eventoId": "760513",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",

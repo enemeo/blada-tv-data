@@ -1,25 +1,6 @@
 [
   {
     "id": 1,
-    "eventoId": "760513",
-    "ligaCodigo": "fifa.world",
-    "liga": "Copa Mundial",
-    "hora": "8:00 PM",
-    "fecha": "11/07",
-    "equipoLocal": "Argentina",
-    "equipoVisitante": "Suiza",
-    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
-    "estado": "Programado",
-    "detalleEstado": "Sáb, Julio 11º at 9:00 p. m. EDT",
-    "golesLocal": "0",
-    "golesVisitante": "0",
-    "canal": "ESPN",
-    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjIxNC40NC40OQ==/13_.m3u8?token=8IZuISDeRfEToK6sWoYvHQ&expires=1783861512"
-  },
-  {
-    "id": 2,
     "eventoId": "760514",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -36,5 +17,24 @@
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjIxNC40NC40OQ==/13_.m3u8?token=8IZuISDeRfEToK6sWoYvHQ&expires=1783861512"
+  },
+  {
+    "id": 2,
+    "eventoId": "760515",
+    "ligaCodigo": "fifa.world",
+    "liga": "Copa Mundial",
+    "hora": "2:00 PM",
+    "fecha": "15/07",
+    "equipoLocal": "Inglaterra",
+    "equipoVisitante": "Argentina",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+    "estado": "Programado",
+    "detalleEstado": "Mié, Julio 15º at 3:00 p. m. EDT",
+    "golesLocal": "0",
+    "golesVisitante": "0",
+    "canal": "ESPN",
+    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
+    "videoUrl": ""
   }
 ]

@@ -1,25 +1,6 @@
 [
   {
     "id": 1,
-    "eventoId": "760512",
-    "ligaCodigo": "fifa.world",
-    "liga": "Copa Mundial",
-    "hora": "4:00 PM",
-    "fecha": "11/07",
-    "equipoLocal": "Noruega",
-    "equipoVisitante": "Inglaterra",
-    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/nor.png",
-    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
-    "estado": "En progreso",
-    "detalleEstado": "42'",
-    "golesLocal": "1",
-    "golesVisitante": "0",
-    "canal": "ESPN",
-    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjIxNC40NC40OQ==/13_.m3u8?token=8IZuISDeRfEToK6sWoYvHQ&expires=1783861512"
-  },
-  {
-    "id": 2,
     "eventoId": "760513",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
@@ -38,7 +19,7 @@
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjIxNC40NC40OQ==/13_.m3u8?token=8IZuISDeRfEToK6sWoYvHQ&expires=1783861512"
   },
   {
-    "id": 3,
+    "id": 2,
     "eventoId": "760514",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",

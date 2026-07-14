@@ -1,6 +1,25 @@
 [
   {
     "id": 1,
+    "eventoId": "760514",
+    "ligaCodigo": "fifa.world",
+    "liga": "Copa Mundial",
+    "hora": "2:00 PM",
+    "fecha": "14/07",
+    "equipoLocal": "Francia",
+    "equipoVisitante": "España",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+    "estado": "En progreso",
+    "detalleEstado": "MT",
+    "golesLocal": "0",
+    "golesVisitante": "1",
+    "canal": "ESPN",
+    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
+    "videoUrl": ""
+  },
+  {
+    "id": 2,
     "eventoId": "760515",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",

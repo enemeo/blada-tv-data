@@ -17,5 +17,24 @@
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjIxNC40NC40OQ==/13_.m3u8?token=8IZuISDeRfEToK6sWoYvHQ&expires=1783861512"
+  },
+  {
+    "id": 2,
+    "eventoId": "760516",
+    "ligaCodigo": "fifa.world",
+    "liga": "Copa Mundial",
+    "hora": "4:00 PM",
+    "fecha": "18/07",
+    "equipoLocal": "Francia",
+    "equipoVisitante": "Perdedor Semifinal 2",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+    "logoVisitante": "",
+    "estado": "Programado",
+    "detalleEstado": "Sáb, Julio 18º at 5:00 p. m. EDT",
+    "golesLocal": "0",
+    "golesVisitante": "0",
+    "canal": "ESPN",
+    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
+    "videoUrl": ""
   }
 ]

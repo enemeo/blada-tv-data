@@ -17,5 +17,24 @@
     "canal": "ESPN",
     "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
     "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MTcyLjE4NC4yMjAuMTky/13_.m3u8?token=YsL9XPzssAgQiopWOEzf0g&expires=1784213480"
+  },
+  {
+    "id": 2,
+    "eventoId": "760517",
+    "ligaCodigo": "fifa.world",
+    "liga": "Copa Mundial",
+    "hora": "2:00 PM",
+    "fecha": "19/07",
+    "equipoLocal": "España",
+    "equipoVisitante": "Argentina",
+    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+    "estado": "Programado",
+    "detalleEstado": "Dom, Julio 19º at 3:00 p. m. EDT",
+    "golesLocal": "0",
+    "golesVisitante": "0",
+    "canal": "ESPN",
+    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
+    "videoUrl": ""
   }
 ]

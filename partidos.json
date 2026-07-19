@@ -1,25 +1,6 @@
 [
   {
     "id": 1,
-    "eventoId": "760516",
-    "ligaCodigo": "fifa.world",
-    "liga": "Copa Mundial",
-    "hora": "4:00 PM",
-    "fecha": "18/07",
-    "equipoLocal": "Francia",
-    "equipoVisitante": "Inglaterra",
-    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
-    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
-    "estado": "En progreso",
-    "detalleEstado": "48'",
-    "golesLocal": "0",
-    "golesVisitante": "4",
-    "canal": "ESPN",
-    "fuenteUrl": "https://tvporinternet2.com/espn-en-vivo-por-internet.php",
-    "videoUrl": "https://deportes.ksdjugfsddeports.com:9092/MjAuMTY5Ljc0LjIyNw==/13_.m3u8?token=7MwCktervQnv0fvknulpnw&expires=1784461980"
-  },
-  {
-    "id": 2,
     "eventoId": "760517",
     "ligaCodigo": "fifa.world",
     "liga": "Copa Mundial",
